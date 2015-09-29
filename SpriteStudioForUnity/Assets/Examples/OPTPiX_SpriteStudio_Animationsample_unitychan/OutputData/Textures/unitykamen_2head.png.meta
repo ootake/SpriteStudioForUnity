@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 100aca452d82b4997bd03a089b703736
+timeCreated: 1443486298
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: head
+    21300002: body
+    21300004: leg_l
+    21300006: leg_r
+    21300008: hair
+    21300010: arm_l
+    21300012: object1
+    21300014: object2
+    21300016: object3
+    21300018: arm_r
+    21300020: shadow
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 0
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: head
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 673
+        width: 319
+        height: 331
+      alignment: 9
+      pivot: {x: .507836998, y: .25075528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: body
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 312
+        width: 334
+        height: 346
+      alignment: 9
+      pivot: {x: .494011968, y: .35838151}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leg_l
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 726
+        width: 156
+        height: 183
+      alignment: 9
+      pivot: {x: .628205121, y: .72131145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: leg_r
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 725
+        width: 158
+        height: 184
+      alignment: 9
+      pivot: {x: .33544302, y: .722826123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hair
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 560
+        width: 299
+        height: 455
+      alignment: 9
+      pivot: {x: .471571892, y: .773626387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arm_l
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 257
+        width: 122
+        height: 211
+      alignment: 9
+      pivot: {x: .581967235, y: .824644566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: object1
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 15
+        width: 438
+        height: 230
+      alignment: 9
+      pivot: {x: .760273933, y: .765217423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: object2
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 920
+        width: 318
+        height: 95
+      alignment: 9
+      pivot: {x: .603773594, y: .242105275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: object3
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 258
+        width: 174
+        height: 211
+      alignment: 9
+      pivot: {x: .5, y: .450236976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arm_r
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 257
+        width: 122
+        height: 211
+      alignment: 9
+      pivot: {x: .590163946, y: .824644566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shadow
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 12
+        width: 178
+        height: 51
+      alignment: 9
+      pivot: {x: .528089881, y: .19607842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
