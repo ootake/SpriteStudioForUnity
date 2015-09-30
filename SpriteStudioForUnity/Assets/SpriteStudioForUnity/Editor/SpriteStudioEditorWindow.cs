@@ -22,7 +22,7 @@ namespace SpriteStudioForUnity
 
 		void PrefsLoad ()
 		{
-			string prefsPath = EditorPrefs.GetString ("PROJECT_FILE_PATH", "");
+			string prefsPath = EditorPrefs.GetString ("SPRITE_STUDIO_FILE_PATH", "");
 			projectFilePath = System.String.Copy (System.Text.UTF8Encoding.UTF8.GetString (System.Convert.FromBase64String (prefsPath)));
 		}
 		
@@ -30,7 +30,7 @@ namespace SpriteStudioForUnity
 		{
 			if (projectFilePath.Length > 0) {
 				string prefsPath = System.Convert.ToBase64String (System.Text.UTF8Encoding.UTF8.GetBytes (projectFilePath));
-				EditorPrefs.SetString ("PROJECT_FILE_PATH", prefsPath);
+				EditorPrefs.SetString ("SPRITE_STUDIO_FILE_PATH", prefsPath);
 			}
 		}
 
