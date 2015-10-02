@@ -1,0 +1,1796 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioAnimePack version="1.00.01">
+	<settings>
+		<fps>30</fps>
+		<frameCount>11</frameCount>
+		<sortMode>prio</sortMode>
+		<canvasSize>320 320</canvasSize>
+		<pivot>0 0</pivot>
+		<bgColor>FF323232</bgColor>
+		<gridSize>32</gridSize>
+		<gridColor>FF808080</gridColor>
+		<outStartNum>0</outStartNum>
+	</settings>
+	<name>effect015</name>
+	<exportPath></exportPath>
+	<Model>
+		<partList>
+			<value>
+				<name>root</name>
+				<arrayIndex>0</arrayIndex>
+				<parentIndex>-1</parentIndex>
+				<type>null</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises1</name>
+				<arrayIndex>1</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises2</name>
+				<arrayIndex>2</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises3</name>
+				<arrayIndex>3</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises4</name>
+				<arrayIndex>4</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises5</name>
+				<arrayIndex>5</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises6</name>
+				<arrayIndex>6</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises7</name>
+				<arrayIndex>7</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises8</name>
+				<arrayIndex>8</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises9</name>
+				<arrayIndex>9</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises10</name>
+				<arrayIndex>10</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises11</name>
+				<arrayIndex>11</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises12</name>
+				<arrayIndex>12</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises13</name>
+				<arrayIndex>13</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises14</name>
+				<arrayIndex>14</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>Rises15</name>
+				<arrayIndex>15</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>add</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+		</partList>
+	</Model>
+	<cellmapNames>
+		<value>effect001.ssce</value>
+	</cellmapNames>
+	<animeList>
+		<anime>
+			<name>roundwave</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>30</fps>
+				<frameCount>30</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>960 640</canvasSize>
+				<pivot>-0.5 -0.5</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>16</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises1</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="3" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="3" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="12">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="0" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises2</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="1">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="1" ipType="linear">
+								<value>56</value>
+							</key>
+							<key time="4" ipType="linear">
+								<value>56</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>56</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="1" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="4" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="1" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="1" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="4" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="1" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="4" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="1">
+								<value>0</value>
+							</key>
+							<key time="4">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="1" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises3</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="2">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="2" ipType="linear">
+								<value>112</value>
+							</key>
+							<key time="5" ipType="linear">
+								<value>112</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>112</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="2" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="5" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="2" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="2" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="5" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="2" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="5" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="2">
+								<value>0</value>
+							</key>
+							<key time="5">
+								<value>0</value>
+							</key>
+							<key time="14">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="2" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises4</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="3">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="3" ipType="linear">
+								<value>168</value>
+							</key>
+							<key time="6" ipType="linear">
+								<value>168</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>168</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="3" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="6" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="3" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="3" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="6" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="3" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="6" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="3">
+								<value>0</value>
+							</key>
+							<key time="6">
+								<value>0</value>
+							</key>
+							<key time="15">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="3" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises5</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="4">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="4" ipType="linear">
+								<value>224</value>
+							</key>
+							<key time="7" ipType="linear">
+								<value>224</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>224</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="4" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="7" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="4" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="4" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="7" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="4" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="7" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="4">
+								<value>0</value>
+							</key>
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="16">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="4" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises6</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="5">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="5" ipType="linear">
+								<value>280</value>
+							</key>
+							<key time="8" ipType="linear">
+								<value>280</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>280</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="5" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="8" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="5" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="5" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="8" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="5" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="8" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="5">
+								<value>0</value>
+							</key>
+							<key time="8">
+								<value>0</value>
+							</key>
+							<key time="17">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="5" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises7</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="6">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="6" ipType="linear">
+								<value>336</value>
+							</key>
+							<key time="9" ipType="linear">
+								<value>336</value>
+							</key>
+							<key time="18" ipType="linear">
+								<value>336</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="6" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="9" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="18" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="6" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="6" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="9" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="18" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="6" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="9" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="18" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="6">
+								<value>0</value>
+							</key>
+							<key time="9">
+								<value>0</value>
+							</key>
+							<key time="18">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="6" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises8</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="7">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="7" ipType="linear">
+								<value>392</value>
+							</key>
+							<key time="10" ipType="linear">
+								<value>392</value>
+							</key>
+							<key time="19" ipType="linear">
+								<value>392</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="7" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="10" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="19" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="7" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="7" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="10" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="19" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="7" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="10" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="19" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="7">
+								<value>0</value>
+							</key>
+							<key time="10">
+								<value>0</value>
+							</key>
+							<key time="19">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="7" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises9</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="8">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="8" ipType="linear">
+								<value>448</value>
+							</key>
+							<key time="11" ipType="linear">
+								<value>448</value>
+							</key>
+							<key time="20" ipType="linear">
+								<value>448</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="8" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="11" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="20" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="8" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="8" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="11" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="20" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="8" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="11" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="20" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="8">
+								<value>0</value>
+							</key>
+							<key time="11">
+								<value>0</value>
+							</key>
+							<key time="20">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="8" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises10</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="9">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="9" ipType="linear">
+								<value>504</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>504</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>504</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="9" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="9" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="9" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="12" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="9" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="12" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="9">
+								<value>0</value>
+							</key>
+							<key time="12">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="9" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises11</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="10">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="10" ipType="linear">
+								<value>560</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>560</value>
+							</key>
+							<key time="22" ipType="linear">
+								<value>560</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="10" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="22" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="10" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="10" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="13" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="22" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="10" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="13" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="22" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="10">
+								<value>0</value>
+							</key>
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="22">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="10" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises12</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="11">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="11" ipType="linear">
+								<value>616</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>616</value>
+							</key>
+							<key time="23" ipType="linear">
+								<value>616</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="11" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="23" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="11" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="11" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="14" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="23" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="11" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="14" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="23" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="11">
+								<value>0</value>
+							</key>
+							<key time="14">
+								<value>0</value>
+							</key>
+							<key time="23">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="11" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises13</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="12">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="12" ipType="linear">
+								<value>672</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>672</value>
+							</key>
+							<key time="24" ipType="linear">
+								<value>672</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="24" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="12" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="12" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="15" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="24" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="12" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="15" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="24" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="12">
+								<value>0</value>
+							</key>
+							<key time="15">
+								<value>0</value>
+							</key>
+							<key time="24">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="12" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises14</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="13">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="13" ipType="linear">
+								<value>728</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>728</value>
+							</key>
+							<key time="25" ipType="linear">
+								<value>728</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="13" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="25" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="13" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="13" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="16" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="25" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="13" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="16" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="25" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="13">
+								<value>0</value>
+							</key>
+							<key time="16">
+								<value>0</value>
+							</key>
+							<key time="25">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="13" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>Rises15</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="14">
+								<value>
+									<mapId>0</mapId>
+									<name>Rises</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="14" ipType="linear">
+								<value>784</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>784</value>
+							</key>
+							<key time="26" ipType="linear">
+								<value>784</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="14" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="26" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="14" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="14" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="17" ipType="linear">
+								<value>5</value>
+							</key>
+							<key time="26" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="14" ipType="deceleration">
+								<value>0.980000019073486</value>
+							</key>
+							<key time="17" ipType="acceleration">
+								<value>1</value>
+							</key>
+							<key time="26" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="14">
+								<value>0</value>
+							</key>
+							<key time="17">
+								<value>0</value>
+							</key>
+							<key time="26">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="VCOL">
+							<key time="14" ipType="linear">
+								<value>
+									<target>vertex</target>
+									<blendType>mix</blendType>
+									<LT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</LT>
+									<RT>
+										<rgba>FFFFFF00</rgba>
+										<rate>1</rate>
+									</RT>
+									<LB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</LB>
+									<RB>
+										<rgba>FFFFFFFF</rgba>
+										<rate>0</rate>
+									</RB>
+								</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+	</animeList>
+</SpriteStudioAnimePack>
