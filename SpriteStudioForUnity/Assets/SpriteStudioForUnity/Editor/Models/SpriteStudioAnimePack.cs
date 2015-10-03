@@ -13,8 +13,8 @@ namespace SpriteStudioForUnity
     
     public partial class SpriteStudioAnimePackSettings
     {
-        public byte fps;
-        public byte frameCount;
+        public int fps;
+        public int frameCount;
         public string sortMode;
     }
     
@@ -27,25 +27,25 @@ namespace SpriteStudioForUnity
     public partial class SpriteStudioAnimePackModelValue
     {
         public string name;
-        public byte arrayIndex;
-        public sbyte parentIndex;
+        public int arrayIndex;
+        public int parentIndex;
         public string type;
         public string boundsType;
         public string inheritType;
         public SpriteStudioAnimePackModelValueIneheritRates ineheritRates;
         public string refEffectName;
         public string alphaBlendType;
-        public byte show;
+        public int show;
     }
     
     public partial class SpriteStudioAnimePackModelValueIneheritRates
     {        
-        public byte ALPH;
-        public byte FLPH;
-        public byte FLPV;
-        public byte HIDE;
-        public byte IFLH;
-        public byte IFLV;
+        public int ALPH;
+        public int FLPH;
+        public int FLPV;
+        public int HIDE;
+        public int IFLH;
+        public int IFLV;
     }
     
     public partial class SpriteStudioAnimePackAnime
@@ -58,8 +58,8 @@ namespace SpriteStudioForUnity
     
     public partial class SpriteStudioAnimePackAnimeSettings
     {
-        public byte fps;
-        public byte frameCount;
+        public int fps;
+        public int frameCount;
         public string sortMode;
         public string pivot;
     }
@@ -84,7 +84,7 @@ namespace SpriteStudioForUnity
         public SpriteStudioAnimePackAnimePartAnimeAttributeKeyCurve curve;
         public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValue value;
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public sbyte time;
+        public int time;
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string ipType;
     }
@@ -92,14 +92,14 @@ namespace SpriteStudioForUnity
     public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyCurve
     {
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte syncStartEnd;
+        public int syncStartEnd;
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Value;
     }
     
     public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValue
     {
-        public byte integer;
+        public int integer;
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool integerSpecified;
         public string point;
@@ -108,11 +108,11 @@ namespace SpriteStudioForUnity
         public string target;
         public string blendType;
         public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColor color;
-        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueLT LT;
-        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueRT RT;
-        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueLB LB;
-        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueRB RB;
-        public byte mapId;
+        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColors LT;
+        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColors RT;
+        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColors LB;
+        public SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColors RB;
+        public int mapId;
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool mapIdSpecified;
         public string name;
@@ -123,38 +123,15 @@ namespace SpriteStudioForUnity
     public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColor
     {
         public string rgba;
-        public byte rate;
+        public float rate;
     }
     
-    public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueLT
+    public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueColors
     {
         public string rgba;
-        public byte rate;
+        public float rate;
         [System.Xml.Serialization.XmlTextAttribute()]
         public string[] Text;
     }
     
-    public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueRT
-    {
-        public string rgba;
-        public byte rate;
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text;
-    }
-    
-    public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueLB
-    {
-        public string rgba;
-        public byte rate;
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text;
-    }
-    
-    public partial class SpriteStudioAnimePackAnimePartAnimeAttributeKeyValueRB
-    {
-        public string rgba;
-        public byte rate;
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text;
-    }
 }

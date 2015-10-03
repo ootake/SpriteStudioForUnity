@@ -87,6 +87,8 @@ namespace SpriteStudioForUnity
             if (result)
                 result = ParseAnimePacks(baker);
             if (result)
+                result = CreateTextures(baker);
+            if (result)
                 result = CreateMaterials(baker);
             if (result)
                 result = CreateCellDataS(baker);
