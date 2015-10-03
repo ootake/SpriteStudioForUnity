@@ -22,7 +22,7 @@ namespace SpriteStudioForUnity
                 case "linear":
                     return TangentMode.Linear;
                 case "bezier":
-                    return TangentMode.Smooth;
+                    return TangentMode.Linear;
                 default:
                     return TangentMode.Stepped;
             }
