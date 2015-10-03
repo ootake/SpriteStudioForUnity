@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using UnityEditor.Animations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Linq;
 using System.Xml.Serialization;
+using System.Reflection;
 using CurveExtended;
 
 namespace SpriteStudioForUnity
@@ -19,6 +21,8 @@ namespace SpriteStudioForUnity
             {
                 case "linear":
                     return TangentMode.Linear;
+                case "bezier":
+                    return TangentMode.Smooth;
                 default:
                     return TangentMode.Stepped;
             }
@@ -247,7 +251,12 @@ namespace SpriteStudioForUnity
             {
                 AnimationClip clip = new AnimationClip();
                 clip.name = packAnime.name;
-                clip.frameRate = packAnime.settings.fps;                
+                clip.frameRate = packAnime.settings.fps;     
+
+                AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings (clip);
+                settings.loopTime = true;
+                AnimationUtility.SetAnimationClipSettings(clip, settings);
+
                 animatorController.AddMotion(clip);
                 AssetDatabase.AddObjectToAsset(clip, animatorController);
                     
