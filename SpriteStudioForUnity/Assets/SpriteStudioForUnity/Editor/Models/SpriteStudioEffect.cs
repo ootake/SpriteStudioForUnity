@@ -3,7 +3,7 @@
 	public partial class SpriteStudioEffect
 	{
         public string name;
-        public object exportPath;
+        public string exportPath;
         public SpriteStudioEffectEffectData effectData;
 		[System.Xml.Serialization.XmlAttributeAttribute()]
         public string version;
@@ -11,9 +11,9 @@
 	
 	public partial class SpriteStudioEffectEffectData
 	{
-        public byte lockRandSeed;
-        public byte isLockRandSeed;
-        public byte fps;
+        public int lockRandSeed;
+        public int isLockRandSeed;
+        public int fps;
         public string bgcolor;
 		[System.Xml.Serialization.XmlArrayItemAttribute("node", IsNullable = false)]
         public SpriteStudioEffectEffectDataNode[] nodeList;
@@ -23,9 +23,9 @@
 	{
         public string name;
         public string type;
-        public byte arrayIndex;
-        public sbyte parentIndex;
-        public byte visible;
+        public int arrayIndex;
+        public int parentIndex;
+        public int visible;
         public SpriteStudioEffectEffectDataNodeBehavior behavior;
 	}
 	
@@ -41,103 +41,60 @@
 	public partial class SpriteStudioEffectEffectDataNodeBehaviorValue
 	{
         public string name;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueDisprange disprange;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueSizeX SizeX;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueSizeY SizeY;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueScaleFactor ScaleFactor;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueRotation Rotation;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueRotationAdd RotationAdd;
-        public byte DelayTime;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble disprange;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble SizeX;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble SizeY;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble ScaleFactor;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble Rotation;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble RotationAdd;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble OffsetX;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble OffsetY;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueString Color;
+        public string Gravity;
+        public double EndLifeTimePer;
+        public int DelayTime;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DelayTimeSpecified;
-        public byte priority;
+        public int priority;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool prioritySpecified;
-        public byte maximumParticle;
+        public int maximumParticle;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool maximumParticleSpecified;
-        public byte attimeCreate;
+        public int attimeCreate;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool attimeCreateSpecified;
-        public byte interval;
+        public int interval;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool intervalSpecified;
-        public byte lifetime;
+        public int lifetime;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool lifetimeSpecified;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueSpeed speed;
-        public SpriteStudioEffectEffectDataNodeBehaviorValueLifespan lifespan;
-        public byte angle;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble speed;
+        public SpriteStudioEffectEffectDataNodeBehaviorValueDouble lifespan;
+        public double angle;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool angleSpecified;
-        public ushort angleVariance;
+        public double angleVariance;
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool angleVarianceSpecified;
 		[System.Xml.Serialization.XmlAttributeAttribute("name")]
         public string name1;
 	}
 	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueDisprange
+	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueDouble
 	{
 		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal value;
+        public double value;
 		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
+        public double subvalue;
 	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueSizeX
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
-	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueSizeY
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
-	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueScaleFactor
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
-	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueRotation
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
-	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueRotationAdd
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
-	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueSpeed
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public decimal subvalue;
-	}
-	
-	public partial class SpriteStudioEffectEffectDataNodeBehaviorValueLifespan
-	{
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte value;
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte subvalue;
-	}	
+
+    public partial class SpriteStudioEffectEffectDataNodeBehaviorValueString
+    {
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string value;
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string subvalue;
+    }
 }

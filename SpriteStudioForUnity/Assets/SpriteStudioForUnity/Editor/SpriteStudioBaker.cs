@@ -35,6 +35,7 @@ namespace SpriteStudioForUnity
         public string texturesDirectory;
         public string materialsDirectory;
         public string cellDataDirectory;
+        public string effectDirectory;
         public string animationsDirectory;
         public string prefabsDirectory;
         public int pixelPerUnit = 1;
@@ -42,13 +43,14 @@ namespace SpriteStudioForUnity
         public SpriteStudioProject projectData;
         public List<SpriteStudioCellMap> cellMapList;
         public List<SpriteStudioAnimePack> animePackList;
+        public List<SpriteStudioEffect> effectList;
         public Dictionary<string, Material> addMaterialDict;
         public Dictionary<string, Material> mixMaterialDict;
         public Dictionary<string, Material> mulMaterialDict;
         public Dictionary<string, Material> subMaterialDict;
         public Dictionary<string, List<SpriteStudioCell>> cellMaps;
 
-        public void GetProjectFile(string path)
+        public void DeserializeProject(string path)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(SpriteStudioProject));
             using (StreamReader sr = new StreamReader(path, new UTF8Encoding(false)))
@@ -57,7 +59,7 @@ namespace SpriteStudioForUnity
             }
         }
         
-        public void GetCellMap(string path)
+        public void DeserializeCellMap(string path)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(SpriteStudioCellMap));          
             using (StreamReader sr = new StreamReader(path, new UTF8Encoding(false)))
@@ -66,8 +68,18 @@ namespace SpriteStudioForUnity
                 cellMapList.Add(cellMap);
             }
         }
-        
-        public void GetAnimePack(string path)
+
+        public void DeserializeEffect(string path)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(SpriteStudioEffect));
+            using (StreamReader sr = new StreamReader(path,new UTF8Encoding(false)))
+            {
+                SpriteStudioEffect effect = serializer.Deserialize(sr) as SpriteStudioEffect;
+                effectList.Add(effect);
+            }
+        }
+
+        public void DeserializeAnimePack(string path)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(SpriteStudioAnimePack));
             using (StreamReader sr = new StreamReader(path,new UTF8Encoding(false)))
@@ -76,6 +88,7 @@ namespace SpriteStudioForUnity
                 animePackList.Add(animePack);
             }
         }
+
 
         public void CreateTexture(SpriteStudioCellMap cellMap)
         {           
@@ -174,6 +187,59 @@ namespace SpriteStudioForUnity
             }
             
             cellMaps [cellMap.name] = cellList;
+        }
+
+        public void CreateEffect(SpriteStudioEffect effect)
+        {
+            GameObject effectObj = new GameObject(effect.name);
+
+            List<SpriteStudioEffectNode> nodeList = new List<SpriteStudioEffectNode>();
+            foreach (SpriteStudioEffectEffectDataNode dataNode in effect.effectData.nodeList)
+            {
+                string name = dataNode.name;
+                if(dataNode.parentIndex != -1){
+                    name += "[" + dataNode.type + "]";
+                }
+                GameObject nodeObj = new GameObject(name);
+                SpriteStudioEffectNode node = nodeObj.AddComponent<SpriteStudioEffectNode>();
+                node.arrayIndex = dataNode.arrayIndex;
+               
+                if(dataNode.type == "Emmiter"){
+                    SpriteStudioEmitter emitter = nodeObj.AddComponent<SpriteStudioEmitter>();
+
+                    foreach(SpriteStudioEffectEffectDataNodeBehaviorValue value in dataNode.behavior.list){
+                        if(value.name == "Basic"){
+                            emitter.priority = value.priority;
+                            emitter.maximumParticle = value.maximumParticle;
+                            emitter.attimeCreate = value.attimeCreate;
+                            emitter.lifetime = value.lifetime;
+                            emitter.minSpeed = value.speed.value;
+                            emitter.maxSpeed = value.speed.subvalue;
+                            emitter.minLifespan = value.lifespan.value;
+                            emitter.maxLifespan = value.lifespan.subvalue;
+                            emitter.angle = value.angle;
+                            emitter.angleVariance = value.angleVariance;
+                        }
+                    }
+                }
+
+
+                SpriteStudioEffectNode parentNode = nodeList.FirstOrDefault( v => v.arrayIndex == dataNode.parentIndex);
+                if(parentNode != null){
+                    node.gameObject.transform.parent = parentNode.gameObject.transform;
+                }else{
+                    node.gameObject.transform.parent = effectObj.transform;
+                }
+
+                nodeList.Add(node);
+            }
+
+            string path = effectDirectory + "/" + effectObj.name + ".prefab";
+            PrefabUtility.CreatePrefab(path, effectObj);            
+            UnityEngine.GameObject.DestroyImmediate(effectObj);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
         }
 
         public void CreateAnimator(SpriteStudioAnimePack animePack)

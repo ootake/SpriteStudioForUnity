@@ -80,25 +80,29 @@ namespace SpriteStudioForUnity
             baker.sourceDirectory = Path.GetDirectoryName(projectFilePath);
 
             CreateFolders(baker);
-            result = ParseProject(baker);
+            result = DeserializeProject(baker);
 
             if (result)
-                result = ParseCellMaps(baker);
+                result = DeserializeCellMaps(baker);
             if (result)
-                result = ParseAnimePacks(baker);
+                result = DeserializeEffects(baker);
+            if (result)
+                result = DeserializeAnimePacks(baker);
             if (result)
                 result = CreateTextures(baker);
             if (result)
                 result = CreateMaterials(baker);
             if (result)
-                result = CreateCellDataS(baker);
+                result = CreateCellDatas(baker);
+            if (result)
+                result = CreateEffects(baker);
             if (result)
                 result = CreateAnimations(baker);
 
             AssetDatabase.Refresh();
             EditorUtility.ClearProgressBar();
 
-            if(result)
+            if (result)
                 EditorUtility.DisplayDialog("Sprite Studio For Unity", "Complate", "OK");
         }
 
@@ -112,32 +116,37 @@ namespace SpriteStudioForUnity
             baker.materialsDirectory = AssetDatabase.GUIDToAssetPath(guid);
             guid = AssetDatabase.CreateFolder(baker.destDirectory, "Cells");
             baker.cellDataDirectory = AssetDatabase.GUIDToAssetPath(guid);
+            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Effects");
+            baker.effectDirectory = AssetDatabase.GUIDToAssetPath(guid);
             guid = AssetDatabase.CreateFolder(baker.destDirectory, "Animations");
             baker.animationsDirectory = AssetDatabase.GUIDToAssetPath(guid);
             guid = AssetDatabase.CreateFolder(baker.destDirectory, "Prefabs");
             baker.prefabsDirectory = AssetDatabase.GUIDToAssetPath(guid);
         }
 
-        bool ParseProject(SpriteStudioBaker baker)
+        bool DeserializeProject(SpriteStudioBaker baker)
         {
             string message = null;
             try
             {
                 message = projectFilePath;
-                EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Parse Project : " + projectFilePath, 0.1f);
-                baker.GetProjectFile(projectFilePath);
-                return true;
+                EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Deserialize Project : " + projectFilePath, 0.1f);
+                baker.DeserializeProject(projectFilePath);
             } catch (Exception e)
             {
-                EditorUtility.DisplayDialog("Error", "Parse Project : " + message, "OK");
+                EditorUtility.DisplayDialog("Error", "Deserialize Project : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
+            return true;
         }
 
-        bool ParseCellMaps(SpriteStudioBaker baker)
+        bool DeserializeCellMaps(SpriteStudioBaker baker)
         {
             baker.cellMapList = new List<SpriteStudioCellMap>();
+
+            if (baker.projectData.cellmapNames == null)
+                return true;
 
             string message = null;
             try
@@ -146,22 +155,50 @@ namespace SpriteStudioForUnity
                 {
                     string cellmapName = baker.projectData.cellmapNames [i];
                     message = cellmapName;
-                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Parse CellMap(" + (i + 1) + "/" + baker.projectData.cellmapNames.Length + ") : " + cellmapName, 0.2f);
-                    baker.GetCellMap(baker.sourceDirectory + "/" + cellmapName);
+                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Deserialize CellMap(" + (i + 1) + "/" + baker.projectData.cellmapNames.Length + ") : " + cellmapName, 0.2f);
+                    baker.DeserializeCellMap(baker.sourceDirectory + "/" + cellmapName);
                 }           
-                return true;
             } catch (Exception e)
             {
-                EditorUtility.DisplayDialog("Error", "Parse CellMap : " + message, "OK");
+                EditorUtility.DisplayDialog("Error", "Deserialize CellMap : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
-
+            return true;
         }
 
-        bool ParseAnimePacks(SpriteStudioBaker baker)
+        bool DeserializeEffects(SpriteStudioBaker baker)
+        {
+            baker.effectList = new List<SpriteStudioEffect>();
+
+            if (baker.projectData.effectFileNames == null)
+                return true;
+
+            string message = null;
+            try
+            {
+                for (int i = 0; i < baker.projectData.effectFileNames.Length; i++)
+                {
+                    string effectFileName = baker.projectData.effectFileNames [i];
+                    message = effectFileName;
+                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Deserialize Effect(" + (i + 1) + "/" + baker.projectData.effectFileNames.Length + ") : " + effectFileName, 0.3f);
+                    baker.DeserializeEffect(baker.sourceDirectory + "/" + effectFileName);
+                }           
+            } catch (Exception e)
+            {
+                EditorUtility.DisplayDialog("Error", "Deserialize Effect : " + message, "OK");
+                Debug.Log(e.StackTrace);
+                return false;
+            }
+            return true;
+        }
+
+        bool DeserializeAnimePacks(SpriteStudioBaker baker)
         {
             baker.animePackList = new List<SpriteStudioAnimePack>();
+
+            if (baker.projectData.animepackNames == null)
+                return true;
 
             string message = null;
             try
@@ -170,37 +207,41 @@ namespace SpriteStudioForUnity
                 {
                     string animepackName = baker.projectData.animepackNames [i];
                     message = animepackName;
-                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Parse AnimePack(" + (i + 1) + "/" + baker.projectData.animepackNames.Length + ") : " + animepackName, 0.3f);
-                    baker.GetAnimePack(baker.sourceDirectory + "/" + animepackName);
+                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Deserialize AnimePack(" + (i + 1) + "/" + baker.projectData.animepackNames.Length + ") : " + animepackName, 0.4f);
+                    baker.DeserializeAnimePack(baker.sourceDirectory + "/" + animepackName);
                 }
-                return true;
             } catch (Exception e)
             {
-                EditorUtility.DisplayDialog("Error", "Parse AnimePack : " + message, "OK");
+                EditorUtility.DisplayDialog("Error", "Deserialize AnimePack : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
+            return true;
         }
 
         bool CreateTextures(SpriteStudioBaker baker)
         {
             string message = null;
+
+            if (baker.cellMapList == null)
+                return true;
+
             try
             {
                 for (int i = 0; i < baker.cellMapList.Count; i++)
                 {
                     SpriteStudioCellMap cellMap = baker.cellMapList [i];
                     message = cellMap.imagePath;
-                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Create Texture(" + (i + 1) + "/" + baker.cellMapList.Count + ") : " + cellMap.name, 0.4f);
+                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Create Texture(" + (i + 1) + "/" + baker.cellMapList.Count + ") : " + cellMap.name, 0.5f);
                     baker.CreateTexture(cellMap);
                 }
-                return true;
             } catch (Exception e)
             {
                 EditorUtility.DisplayDialog("Error", "Create Texture : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
+            return true;
         }
 
         bool CreateMaterials(SpriteStudioBaker baker)
@@ -209,6 +250,9 @@ namespace SpriteStudioForUnity
             baker.mixMaterialDict = new Dictionary<string, Material>();
             baker.mulMaterialDict = new Dictionary<string, Material>();
             baker.subMaterialDict = new Dictionary<string, Material>();                
+
+            if (baker.cellMapList == null)
+                return true;
 
             string message = null;
             try
@@ -220,18 +264,22 @@ namespace SpriteStudioForUnity
                     EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Create Material(" + (i + 1) + "/" + baker.cellMapList.Count + ") : " + cellMap.name, 0.6f);
                     baker.CreateMaterials(cellMap);                    
                 }
-                return true;
             } catch (Exception e)
             {
                 EditorUtility.DisplayDialog("Error", "Create Material : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
+            return true;
         }
 
-        bool CreateCellDataS(SpriteStudioBaker baker)
+        bool CreateCellDatas(SpriteStudioBaker baker)
         {
             baker.cellMaps = new Dictionary<string, List<SpriteStudioCell>>();
+
+            if (baker.cellMapList == null)
+                return true;
+
             int mapId = 0;
 
             string message = null;
@@ -245,34 +293,62 @@ namespace SpriteStudioForUnity
                     baker.CreateCellData(cellMap, mapId);                  
                     mapId++;
                 }
-                return true;
             } catch (Exception e)
             {
                 EditorUtility.DisplayDialog("Error", "Create CellData : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
+            return true;
+        }
+
+        bool CreateEffects(SpriteStudioBaker baker)
+        {
+            if (baker.effectList == null)
+                return true;
+
+            string message = null;
+            try
+            {
+                for (int i = 0; i < baker.effectList.Count; i++)
+                {
+                    SpriteStudioEffect effect = baker.effectList [i];
+                    message = effect.name;
+                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Create Effect(" + (i + 1) + "/" + baker.effectList.Count + ") : " + effect.name, 0.8f);
+                    baker.CreateEffect(effect);
+                }
+            } catch (Exception e)
+            {
+                EditorUtility.DisplayDialog("Error", "Create Effect : " + message, "OK");
+                Debug.Log(e.StackTrace);
+                return false;
+            }
+            return true;
         }
 
         bool CreateAnimations(SpriteStudioBaker baker)
         {
             string message = null;
+
+            if (baker.animePackList == null)
+                return true;
+
             try
             {
                 for (int i = 0; i < baker.animePackList.Count; i++)
                 {
                     SpriteStudioAnimePack animePack = baker.animePackList [i];
                     message = animePack.name;
-                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Create Animator(" + (i + 1) + "/" + baker.animePackList.Count + ") : " + animePack.name, 0.8f);
+                    EditorUtility.DisplayProgressBar("Sprite Studio For Unity", "Create Animator(" + (i + 1) + "/" + baker.animePackList.Count + ") : " + animePack.name, 0.9f);
                     baker.CreateAnimator(animePack);
                 }
-                return true;
             } catch (Exception e)
             {
                 EditorUtility.DisplayDialog("Error", "Create Animator : " + message, "OK");
                 Debug.Log(e.StackTrace);
                 return false;
             }
+            return true;
         }
 
     }
