@@ -242,6 +242,72 @@ namespace SpriteStudioForUnity
 
         }
 
+		void SetPosCurve(AnimationCurve curve, SpriteStudioAnimePackAnimePartAnimeAttribute attribute, float fps, int frameCount)
+		{
+			for (int i = 0; i < attribute.key.Length; i++)
+			{
+				SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
+				float time = GetTime(key.time, fps);
+				float value = GetValue(key) / pixelPerUnit;
+				TangentMode tangentMode = key.ipType.ToTangentMode();
+				curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
+			}
+			curve.UpdateAllLinearTangents();
+//			SpriteStudioAnimePackAnimePartAnimeAttributeKey prevKey = null;
+//			SpriteStudioAnimePackAnimePartAnimeAttributeKey nextKey = null;
+//			for (int i = 0; i < frameCount; i++) {
+//				float time = GetTime(i, fps);
+//				float value = 0;
+//				SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key.SingleOrDefault(v => v.time == i);
+//				if(key != null){
+//					value = GetValue(key) / pixelPerUnit;
+//					prevKey = key;
+//				}else{
+//					nextKey = attribute.key.SingleOrDefault(v => v.time > i);
+//					switch(prevKey.ipType){
+//					case "linear":
+//						break;
+//					case "bezier":
+//						break;
+//					case "hermite":
+//						break;
+//					case "acceleration":
+//						break;
+//					case "deceleration":
+//						break;
+//					default:
+//						break;
+//					}
+//				}
+//				curve.AddKey(KeyframeUtil.GetNew(time, value, TangentMode.Stepped));
+//			}
+//			curve.UpdateAllLinearTangents();
+		}
+
+		void SetFloatCurve(AnimationCurve curve, SpriteStudioAnimePackAnimePartAnimeAttribute attribute, float fps)
+		{
+			for (int i = 0; i < attribute.key.Length; i++)
+			{
+				SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
+				float time = GetTime(key.time, fps);
+				float value = GetValue(key);
+				TangentMode tangentMode = key.ipType.ToTangentMode();
+				curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
+			}
+			curve.UpdateAllLinearTangents();
+		}
+
+		void SetBoolCurve(AnimationCurve curve, SpriteStudioAnimePackAnimePartAnimeAttribute attribute, float fps)
+		{
+			for (int i = 0; i < attribute.key.Length; i++)
+			{
+				SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
+				float time = GetTime(key.time, fps);
+				float value = GetBoolValue(key);
+				curve.AddKey(KeyframeUtil.GetNew(time, value, TangentMode.Stepped));
+			}
+		}
+
         public void CreateAnimator(SpriteStudioAnimePack animePack)
         {
             GameObject controllerObj = new GameObject(animePack.name);
@@ -288,7 +354,6 @@ namespace SpriteStudioForUnity
                     part.inheritIflh = model.ineheritRates.IFLH == 1;
                     part.inheritIflv = model.ineheritRates.IFLV == 1;
                 }
-
                 partList.Add(part);
 
                 if (part.parentIndex == -1)
@@ -305,7 +370,6 @@ namespace SpriteStudioForUnity
                         part.parent = parentPart;
                     }
                 }
-
             }
 
             string animatorPath = animationsDirectory + "/" + animePack.name + ".controller";
@@ -317,7 +381,8 @@ namespace SpriteStudioForUnity
             {
                 AnimationClip clip = new AnimationClip();
                 clip.name = packAnime.name;
-                clip.frameRate = packAnime.settings.fps;     
+                clip.frameRate = packAnime.settings.fps;  
+				int frameCount = packAnime.settings.frameCount;
 
                 AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings (clip);
                 settings.loopTime = true;
@@ -337,7 +402,7 @@ namespace SpriteStudioForUnity
                         for (int i = 0; i < attribute.key.Length; i++)
                         {
                             SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
+							float time = GetTime(key.time, clip.frameRate);
                             SpriteStudioCell cell = cellList.SingleOrDefault(v => v.mapId == key.value.mapId && v.name == key.value.name);
                             curveCellId.AddKey(KeyframeUtil.GetNew(time, (float)cell.cellId, TangentMode.Stepped));
                         }
@@ -347,176 +412,85 @@ namespace SpriteStudioForUnity
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key) / pixelPerUnit;
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
+						SetPosCurve(curve, attribute, clip.frameRate, frameCount);
                         clip.SetCurve(part.path, typeof(Transform), "localPosition.x", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "POSY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key) / pixelPerUnit;
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(Transform), "localPosition.y", curve);
+						SetPosCurve(curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve(part.path, typeof(Transform), "localPosition.y", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "POSZ");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key) / pixelPerUnit;
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(Transform), "localPosition.z", curve);
+						SetPosCurve(curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve(part.path, typeof(Transform), "localPosition.z", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ROTX");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
+						SetFloatCurve(curve, attribute, clip.frameRate);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationX", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ROTY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationY", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationY", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ROTZ");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationZ", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationZ", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "SCLX");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(Transform), "localScale.x", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(Transform), "localScale.x", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "SCLY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(Transform), "localScale.y", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(Transform), "localScale.y", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ALPH");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "alpha", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "alpha", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "PRIO");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "sortingOrder", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "sortingOrder", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "FLPH");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetBoolValue(key);
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, TangentMode.Stepped));
-                        }
+						SetBoolCurve(curve, attribute, clip.frameRate);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "flipH", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "FLPV");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetBoolValue(key);
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, TangentMode.Stepped));
-                        }
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "flipV", curve);
+						SetBoolCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "flipV", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "HIDE");
                     if (attribute != null)
@@ -525,7 +499,7 @@ namespace SpriteStudioForUnity
                         for (int i = 0; i < attribute.key.Length; i++)
                         {
                             SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
+							float time = GetTime(key.time, clip.frameRate);
                             float value = GetBoolValue(key);
                             if (i == 0 && time != 0)
                             {
@@ -563,7 +537,7 @@ namespace SpriteStudioForUnity
                         for (int i = 0; i < attribute.key.Length; i++)
                         {
                             SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
+							float time = GetTime(key.time, clip.frameRate);
                             ColorBlendTarget target = key.value.target.ToColorBlendTarget();
                             ColorBlendType type = key.value.blendType.ToColorBlendType();
                             float coorBlendValue = (float)type + 1.0f;
@@ -661,7 +635,7 @@ namespace SpriteStudioForUnity
                         for (int i = 0; i < attribute.key.Length; i++)
                         {
                             SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
+							float time = GetTime(key.time, clip.frameRate);
                             Vector2 vertexLB = GetVector2(key.value.LB.Text [0]);
                             Vector2 vertexRB = GetVector2(key.value.RB.Text [0]);
                             Vector2 vertexLT = GetVector2(key.value.LT.Text [0]);
@@ -688,106 +662,50 @@ namespace SpriteStudioForUnity
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
+						SetFloatCurve(curve, attribute, clip.frameRate);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "offsetX", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "PVTY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "offsetY", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "offsetY", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ANCX");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "anchorX", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "anchorX", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ANCY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "anchorY", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "anchorY", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "SIZX");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "sizeX", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "sizeX", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "SIZY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        clip.SetCurve(part.path, typeof(SpriteStudioPart), "sizeY", curve);
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "sizeY", curve);
                     }
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "BNDR");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
-                        {
-                            SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
-                            float value = GetValue(key);
-                            TangentMode tangentMode = key.ipType.ToTangentMode();
-                            curve.AddKey(KeyframeUtil.GetNew(time, value, tangentMode));
-                        }
-                        curve.UpdateAllLinearTangents();
-                        CircleCollider2D collider = part.GetComponent<CircleCollider2D>();
+						SetFloatCurve(curve, attribute, clip.frameRate);
+						CircleCollider2D collider = part.GetComponent<CircleCollider2D>();
                         if (collider == null)
                         {
                             collider = part.gameObject.AddComponent<CircleCollider2D>();
@@ -803,7 +721,7 @@ namespace SpriteStudioForUnity
                         for (int i = 0; i < attribute.key.Length; i++)
                         {
                             SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
-                            float time = GetTime(key, clip.frameRate);
+							float time = GetTime(key.time, clip.frameRate);
 
                             if (key.value.integerSpecified)
                             {
@@ -851,11 +769,11 @@ namespace SpriteStudioForUnity
             AssetDatabase.Refresh();
         }
 
-        float GetTime(SpriteStudioAnimePackAnimePartAnimeAttributeKey key, float frameRate)
+        float GetTime(int val, float frameRate)
         {
-            float time = 0;
-            if (key.time != 0)
-                time = key.time / frameRate;
+			float time = 0;
+            if (val != 0)
+                time = val / frameRate;
             return time;
         }
 
