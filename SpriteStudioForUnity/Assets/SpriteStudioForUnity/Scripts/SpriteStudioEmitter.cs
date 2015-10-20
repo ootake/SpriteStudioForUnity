@@ -83,11 +83,11 @@ namespace SpriteStudioForUnity
         public double angle;
         public double angleVariance;
 
-        ParticleSystem particleSystem;
+//        ParticleSystem particleSystem;
 
         void Start()
         {
-            particleSystem = gameObject.AddComponent<ParticleSystem>();
+//            particleSystem = gameObject.AddComponent<ParticleSystem>();
 
         }
 
