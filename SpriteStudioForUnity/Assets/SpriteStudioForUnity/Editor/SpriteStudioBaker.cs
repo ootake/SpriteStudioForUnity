@@ -469,7 +469,12 @@ namespace SpriteStudioForUnity
                         AnimationCurve curveRTG = new AnimationCurve();
                         AnimationCurve curveRTB = new AnimationCurve();
                         AnimationCurve curveRTA = new AnimationCurve();
-                        for (int i = 0; i < attribute.key.Length; i++)
+						AnimationCurve curveRateLB = new AnimationCurve();
+						AnimationCurve curveRateRB = new AnimationCurve();
+						AnimationCurve curveRateLT = new AnimationCurve();
+						AnimationCurve curveRateRT = new AnimationCurve();
+
+						for (int i = 0; i < attribute.key.Length; i++)
                         {
                             SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
 							float time = GetTime(key.time, clip.frameRate);
@@ -492,12 +497,18 @@ namespace SpriteStudioForUnity
                             float valueRTG = 1;
                             float valueRTB = 1;
                             float valueRTA = 1;
+							float rateLB = 0;
+							float rateRB = 0;
+							float rateLT = 0;
+							float rateRT = 0;
+
                             if (target == ColorBlendTarget.Whole)
                             {
                                 valueLBA = valueRBA = valueLTA = valueRTA = System.Int32.Parse(key.value.color.rgba.Substring(0, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
                                 valueLBR = valueRBR = valueLTR = valueRTR = System.Int32.Parse(key.value.color.rgba.Substring(2, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
                                 valueLBG = valueRBG = valueLTG = valueRTG = System.Int32.Parse(key.value.color.rgba.Substring(4, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
                                 valueLBB = valueRBB = valueLTB = valueRTB = System.Int32.Parse(key.value.color.rgba.Substring(6, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
+								rateLB = rateRB = rateLT = rateRT = key.value.color.rate;
                             } else
                             {
                                 valueLBA = System.Int32.Parse(key.value.LB.rgba.Substring(0, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
@@ -516,7 +527,11 @@ namespace SpriteStudioForUnity
                                 valueRTR = System.Int32.Parse(key.value.RT.rgba.Substring(2, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
                                 valueRTG = System.Int32.Parse(key.value.RT.rgba.Substring(4, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
                                 valueRTB = System.Int32.Parse(key.value.RT.rgba.Substring(6, 2), System.Globalization.NumberStyles.HexNumber) / 255.0f;
-                            }
+								rateLB = key.value.LB.rate;
+								rateRB = key.value.RB.rate;
+								rateLT = key.value.LT.rate;
+								rateRT = key.value.RT.rate;
+							}
 
                             TangentMode tangentMode = TangentMode.Linear;
                             curveBlend.AddKey(KeyframeUtil.GetNew(time, coorBlendValue, tangentMode));
@@ -537,7 +552,12 @@ namespace SpriteStudioForUnity
                             curveRTB.AddKey(KeyframeUtil.GetNew(time, valueRTB, tangentMode));
                             curveRTA.AddKey(KeyframeUtil.GetNew(time, valueRTA, tangentMode));
 
+							curveRateLB.AddKey(KeyframeUtil.GetNew(time, rateLB, tangentMode));
+							curveRateRB.AddKey(KeyframeUtil.GetNew(time, rateRB, tangentMode));
+							curveRateLT.AddKey(KeyframeUtil.GetNew(time, rateLT, tangentMode));
+							curveRateRT.AddKey(KeyframeUtil.GetNew(time, rateRT, tangentMode));
                         }
+
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "colorBlendValue", curveBlend);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "colorLB.r", curveLBR);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "colorLB.g", curveLBG);
@@ -555,7 +575,11 @@ namespace SpriteStudioForUnity
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "colorRT.g", curveRTG);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "colorRT.b", curveRTB);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "colorRT.a", curveRTA);
-                    }
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rateLB", curveRateLB);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rateRB", curveRateRB);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rateLT", curveRateLT);
+						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rateRT", curveRateRT);
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "VERT");
                     if (attribute != null)
                     {
