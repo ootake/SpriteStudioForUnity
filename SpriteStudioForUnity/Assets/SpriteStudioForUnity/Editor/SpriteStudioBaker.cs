@@ -69,6 +69,8 @@ namespace SpriteStudioForUnity
             using (StreamReader sr = new StreamReader(path,new UTF8Encoding(false)))
             {
                 SpriteStudioAnimePack animePack = serializer.Deserialize(sr) as SpriteStudioAnimePack;
+				string name = Path.GetFileNameWithoutExtension(path);
+				animePack.name = name;
                 animePackList.Add(animePack);
             }
         }
@@ -331,56 +333,72 @@ namespace SpriteStudioForUnity
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount, pixelPerUnit);
                         clip.SetCurve(part.path, typeof(Transform), "localPosition.x", curve);
-                    }
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "POSY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount, pixelPerUnit);
 						clip.SetCurve(part.path, typeof(Transform), "localPosition.y", curve);
-                    }
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "POSZ");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount, pixelPerUnit);
 						clip.SetCurve(part.path, typeof(Transform), "localPosition.z", curve);
-                    }
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ROTX");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount);
                         clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationX", curve);
-                    }
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ROTY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationY", curve);
-                    }
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ROTZ");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve(part.path, typeof(SpriteStudioPart), "rotationZ", curve);
-                    }
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "SCLX");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve(part.path, typeof(Transform), "localScale.x", curve);
-                    }
+                    }else{
+						AnimationCurve curve = new AnimationCurve();
+						for(int i = 0; i < frameCount; i++){
+							float time = GetTime(i, clip.frameRate);
+							float value = 1;
+							curve.AddKey(KeyframeUtil.GetNew(time, value, TangentMode.Stepped));
+						}
+						clip.SetCurve(part.path, typeof(Transform), "localScale.x", curve);
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "SCLY");
                     if (attribute != null)
                     {
                         AnimationCurve curve = new AnimationCurve();
 						SetFloatCurve(curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve(part.path, typeof(Transform), "localScale.y", curve);
-                    }
+					}else{
+						AnimationCurve curve = new AnimationCurve();
+						for(int i = 0; i < frameCount; i++){
+							float time = GetTime(i, clip.frameRate);
+							float value = 1;
+							curve.AddKey(KeyframeUtil.GetNew(time, value, TangentMode.Stepped));
+						}
+						clip.SetCurve(part.path, typeof(Transform), "localScale.y", curve);
+					}
                     attribute = partAnime.attributes.SingleOrDefault(v => v.tag == "ALPH");
                     if (attribute != null)
                     {
@@ -754,7 +772,7 @@ namespace SpriteStudioForUnity
 						case "linear":
 							value = Linear(valuePrev, valueNext, timeNormalize);
 							break;
-						case "bezier":
+						case "bezier": {
 							float curveStartTime = float.Parse(prevKey.curve.Value.Split(' ')[0]);
 							float curveStartValue = float.Parse(prevKey.curve.Value.Split(' ')[1]);
 							float curveEndTime = float.Parse(prevKey.curve.Value.Split(' ')[2]);
@@ -765,9 +783,15 @@ namespace SpriteStudioForUnity
 							Vector2 controlEnd = new Vector2(curveEndTime, curveEndValue);
 							value = Bezier(ref start, ref controlStart, ref end, ref controlEnd, timeNormalize);
 							break;
-						case "hermite":
-							value = Linear(valuePrev, valueNext, timeNormalize);
+						}
+						case "hermite": {
+							float curveStartTime = float.Parse(prevKey.curve.Value.Split(' ')[0]);
+							float curveStartValue = float.Parse(prevKey.curve.Value.Split(' ')[1]);
+							float curveEndTime = float.Parse(prevKey.curve.Value.Split(' ')[2]);
+							float curveEndValue = float.Parse(prevKey.curve.Value.Split(' ')[3]);
+							value = Hermite(valuePrev, curveStartValue, valueNext, curveEndValue, timeNormalize);
 							break;
+						}
 						case "acceleration":
 							value = Accelerate(valuePrev, valueNext, timeNormalize);
 							break;
