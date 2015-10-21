@@ -47,6 +47,9 @@ namespace SpriteStudioForUnity
 			XmlSerializer serializer = new XmlSerializer (typeof(SpriteStudioCellMap));          
 			using (StreamReader sr = new StreamReader(path, new UTF8Encoding(false))) {
 				SpriteStudioCellMap cellMap = serializer.Deserialize (sr) as SpriteStudioCellMap;
+				foreach(SpriteStudioCellMapCell cell in cellMap.cells){
+					cell.name = cell.name.Replace("\r", "").Replace("\n", "");
+				}
 				cellMapList.Add (cellMap);
 			}
 		}
@@ -67,6 +70,17 @@ namespace SpriteStudioForUnity
 				SpriteStudioAnimePack animePack = serializer.Deserialize (sr) as SpriteStudioAnimePack;
 				string name = Path.GetFileNameWithoutExtension (path);
 				animePack.name = name;
+				foreach(SpriteStudioAnimePackAnime packAnime in animePack.animeList){
+					foreach(SpriteStudioAnimePackAnimePartAnime partAnime in packAnime.partAnimes){
+						SpriteStudioAnimePackAnimePartAnimeAttribute attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "CELL");
+						if (attribute != null) {
+							foreach(SpriteStudioAnimePackAnimePartAnimeAttributeKey key in attribute.key){
+								key.value.name = key.value.name.Replace("\r", "").Replace("\n", "");
+							}
+						}
+					}
+				}
+
 				animePackList.Add (animePack);
 			}
 		}

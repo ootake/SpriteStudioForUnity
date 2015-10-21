@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 67455292f249f4af4ab4e2b322e871cd
-timeCreated: 1445386998
+guid: f85ee998eab334fa4b1157f00357c585
+timeCreated: 1445388338
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -25,9 +25,7 @@ TextureImporter:
     21300036: Rises
     21300038: Slash
     21300040: Slashwhite
-    21300042: 'Smoke
-
-'
+    21300042: Smoke
     21300044: Sonicboom
     21300046: Starbow
     21300048: explosion
@@ -297,9 +295,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .5, y: .00390625}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 'Smoke
-
-'
+    - name: Smoke
       rect:
         serializedVersion: 2
         x: 768
