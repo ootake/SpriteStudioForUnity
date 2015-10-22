@@ -266,22 +266,14 @@ namespace SpriteStudioForUnity
             }
 
             float uv2y = (float)colorBlendValue + 0.01f;
-//            mesh.uv2 = new Vector2[]
-//            {
-//                new Vector2 (rateLT * opacity, uv2y),
-//				new Vector2 (rateRT * opacity, uv2y),
-//				new Vector2 (rateRB * opacity, uv2y),
-//				new Vector2 (rateLB * opacity, uv2y),
-//				new Vector2 ((rateLT * rateRT * rateRB * rateLB) * opacity, uv2y),
-//            };
-			mesh.uv2 = new Vector2[]
-			{
-				new Vector2 (opacity, uv2y),
-				new Vector2 (opacity, uv2y),
-				new Vector2 (opacity, uv2y),
-				new Vector2 (opacity, uv2y),
-				new Vector2 (opacity, uv2y),
-			};
+            mesh.uv2 = new Vector2[]
+            {
+				new Vector2 (opacity * rateLT, uv2y),
+				new Vector2 (opacity * rateRT, uv2y),
+				new Vector2 (opacity * rateRB, uv2y),
+				new Vector2 (opacity * rateLB, uv2y),
+				new Vector2 (opacity * rateLT, uv2y),
+            };
 
 			mesh.triangles = new int[]
 			{

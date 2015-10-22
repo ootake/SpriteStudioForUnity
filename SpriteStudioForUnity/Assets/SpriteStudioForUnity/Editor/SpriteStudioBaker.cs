@@ -508,24 +508,24 @@ namespace SpriteStudioForUnity
 							curveLBR.AddKey (KeyframeUtil.GetNew (time, valueLBR, tangentMode));
 							curveLBG.AddKey (KeyframeUtil.GetNew (time, valueLBG, tangentMode));
 							curveLBB.AddKey (KeyframeUtil.GetNew (time, valueLBB, tangentMode));
-							curveLBA.AddKey (KeyframeUtil.GetNew (time, valueLBA, tangentMode));
+							curveLBA.AddKey (KeyframeUtil.GetNew (time, rateLB, tangentMode));
 							curveRBR.AddKey (KeyframeUtil.GetNew (time, valueRBR, tangentMode));
 							curveRBG.AddKey (KeyframeUtil.GetNew (time, valueRBG, tangentMode));
 							curveRBB.AddKey (KeyframeUtil.GetNew (time, valueRBB, tangentMode));
-							curveRBA.AddKey (KeyframeUtil.GetNew (time, valueRBA, tangentMode));
+							curveRBA.AddKey (KeyframeUtil.GetNew (time, rateRB, tangentMode));
 							curveLTR.AddKey (KeyframeUtil.GetNew (time, valueLTR, tangentMode));
 							curveLTG.AddKey (KeyframeUtil.GetNew (time, valueLTG, tangentMode));
 							curveLTB.AddKey (KeyframeUtil.GetNew (time, valueLTB, tangentMode));
-							curveLTA.AddKey (KeyframeUtil.GetNew (time, valueLTA, tangentMode));
+							curveLTA.AddKey (KeyframeUtil.GetNew (time, rateLT, tangentMode));
 							curveRTR.AddKey (KeyframeUtil.GetNew (time, valueRTR, tangentMode));
 							curveRTG.AddKey (KeyframeUtil.GetNew (time, valueRTG, tangentMode));
 							curveRTB.AddKey (KeyframeUtil.GetNew (time, valueRTB, tangentMode));
-							curveRTA.AddKey (KeyframeUtil.GetNew (time, valueRTA, tangentMode));
+							curveRTA.AddKey (KeyframeUtil.GetNew (time, rateRT, tangentMode));
 
-							curveRateLB.AddKey (KeyframeUtil.GetNew (time, rateLB, tangentMode));
-							curveRateRB.AddKey (KeyframeUtil.GetNew (time, rateRB, tangentMode));
-							curveRateLT.AddKey (KeyframeUtil.GetNew (time, rateLT, tangentMode));
-							curveRateRT.AddKey (KeyframeUtil.GetNew (time, rateRT, tangentMode));
+							curveRateLB.AddKey (KeyframeUtil.GetNew (time, valueLBA, tangentMode));
+							curveRateRB.AddKey (KeyframeUtil.GetNew (time, valueRBA, tangentMode));
+							curveRateLT.AddKey (KeyframeUtil.GetNew (time, valueLTA, tangentMode));
+							curveRateRT.AddKey (KeyframeUtil.GetNew (time, valueRTA, tangentMode));
 						}
 
 						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorBlendValue", curveBlend);
