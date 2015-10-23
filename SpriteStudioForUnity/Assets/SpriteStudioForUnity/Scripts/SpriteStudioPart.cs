@@ -8,13 +8,13 @@ namespace SpriteStudioForUnity
 	[ExecuteInEditMode]
 	public class SpriteStudioPart : MonoBehaviour
 	{
-        [HideInInspector]
+		[HideInInspector]
 		public int arrayIndex;
-        [HideInInspector]
-        public int parentIndex;
-        [HideInInspector]
-        public SpriteStudioPart parent;
-        public PartType partType;
+		[HideInInspector]
+		public int parentIndex;
+		[HideInInspector]
+		public SpriteStudioPart parent;
+		public PartType partType;
 		public PartBoundsType boundsType;
 		public PartAlphaBlendType alphaBlendType;
 		public PartInheritType inheritType;
@@ -70,13 +70,13 @@ namespace SpriteStudioForUnity
 		public float anchorX;
 		public float anchorY;
 		public float sizeX;
-		public float sizeY;	
+		public float sizeY;
 		public SpriteStudioCell cell;
 		[HideInInspector]
 		public SpriteStudioController controller;
 		MeshRenderer meshRenderer;
 		MeshFilter meshFilter;
-        Mesh mesh;
+		Mesh mesh;
 		float opacity = 1;
 		float _opacity = 1;
 
@@ -85,8 +85,8 @@ namespace SpriteStudioForUnity
 			meshRenderer = GetComponent<MeshRenderer> ();
 			meshRenderer.sortingOrder = arrayIndex;
 			meshFilter = GetComponent<MeshFilter> ();
-            mesh = new Mesh();
-            mesh.MarkDynamic();
+			mesh = new Mesh ();
+			mesh.MarkDynamic ();
 			meshFilter.sharedMesh = mesh;
 			UpdateMesh ();
 		}
@@ -112,18 +112,18 @@ namespace SpriteStudioForUnity
 				transform.localEulerAngles = localEulerAngles;
 			}
 
-            if (partType == PartType.Null)
-                return;
+			if (partType == PartType.Null)
+				return;
 
-            if (cellId == -1) {
-                meshRenderer.enabled = false;
-                return;
-            }            
+			if (cellId == -1) {
+				meshRenderer.enabled = false;
+				return;
+			}            
 
-            if (sortingOrder != _sortingOrder) {
-                _sortingOrder = sortingOrder;
-                meshRenderer.sortingOrder = (int)sortingOrder * 100 + arrayIndex;
-            }
+			if (sortingOrder != _sortingOrder) {
+				_sortingOrder = sortingOrder;
+				meshRenderer.sortingOrder = (int)sortingOrder * 100 + arrayIndex;
+			}
 
 			if (inheritType == PartInheritType.Parent) {
 				SpriteStudioPart current = parent;
@@ -231,41 +231,47 @@ namespace SpriteStudioForUnity
 
 			mesh.name = cell.name;
 
-			float vL = cell.size.x * (-0.5f - cell.pivot.x - offsetX) / cell.pixelPerUnit;
-			float vR = cell.size.x * (0.5f - cell.pivot.x - offsetX) / cell.pixelPerUnit;
-			float vB = cell.size.y * (-0.5f - cell.pivot.y - offsetY) / cell.pixelPerUnit;
-			float vT = cell.size.y * (0.5f - cell.pivot.y - offsetY) / cell.pixelPerUnit;
-            Vector3 vLT = new Vector3 (vL + vertexLT.x / cell.pixelPerUnit, vT + vertexLT.y / cell.pixelPerUnit, 0.0f);
-            Vector3 vRT = new Vector3 (vR + vertexRT.x / cell.pixelPerUnit, vT + vertexRT.y / cell.pixelPerUnit, 0.0f);
-            Vector3 vRB = new Vector3 (vR + vertexRB.x / cell.pixelPerUnit, vB + vertexRB.y / cell.pixelPerUnit, 0.0f);
-            Vector3 vLB = new Vector3 (vL + vertexLB.x / cell.pixelPerUnit, vB + vertexLB.y / cell.pixelPerUnit, 0.0f);
+			float vL, vR, vB, vT;
+
+			if (flipH) {
+				vL = cell.size.x * (-0.5f + cell.pivot.x - offsetX) / cell.pixelPerUnit;
+				vR = cell.size.x * (0.5f + cell.pivot.x - offsetX) / cell.pixelPerUnit;
+			} else {
+				vL = cell.size.x * (-0.5f - cell.pivot.x - offsetX) / cell.pixelPerUnit;
+				vR = cell.size.x * (0.5f - cell.pivot.x - offsetX) / cell.pixelPerUnit;
+			}
+			if (flipV) {
+				vB = cell.size.y * (-0.5f + cell.pivot.y - offsetY) / cell.pixelPerUnit;
+				vT = cell.size.y * (0.5f + cell.pivot.y - offsetY) / cell.pixelPerUnit;
+			} else {
+				vB = cell.size.y * (-0.5f - cell.pivot.y - offsetY) / cell.pixelPerUnit;
+				vT = cell.size.y * (0.5f - cell.pivot.y - offsetY) / cell.pixelPerUnit;
+			}
+            
+			Vector3 vLT = new Vector3 (vL + vertexLT.x / cell.pixelPerUnit, vT + vertexLT.y / cell.pixelPerUnit, 0.0f);
+			Vector3 vRT = new Vector3 (vR + vertexRT.x / cell.pixelPerUnit, vT + vertexRT.y / cell.pixelPerUnit, 0.0f);
+			Vector3 vRB = new Vector3 (vR + vertexRB.x / cell.pixelPerUnit, vB + vertexRB.y / cell.pixelPerUnit, 0.0f);
+			Vector3 vLB = new Vector3 (vL + vertexLB.x / cell.pixelPerUnit, vB + vertexLB.y / cell.pixelPerUnit, 0.0f);
 			Vector3 vC = Vector3.Lerp (Vector3.Lerp (vLB, vRB, 0.5f), Vector3.Lerp (vLT, vRT, 0.5f), 0.5f);
-			mesh.vertices = new Vector3[]
-			{
-                vLT,
-                vRT,
-                vRB,
-                vLB,
-                vC,
-			};
+			if (flipH && flipV) {
+				mesh.vertices = new Vector3[]{ vRB,vLB,vLT,vRT,vC,};
+			} else if (flipH) {
+				mesh.vertices = new Vector3[]{ vRT,vLT,vLB,vRB,vC,};
+			} else if (flipV) {
+				mesh.vertices = new Vector3[]{ vLB,vRB,vRT,vLT,vC,};
+			} else {
+				mesh.vertices = new Vector3[]{ vLT,vRT,vRB,vLB,vC,};
+			}
 
-            Vector2 uvLT = new Vector2 (cell.uvL, cell.uvT);
-            Vector2 uvRT = new Vector2 (cell.uvR, cell.uvT);
-            Vector2 uvRB = new Vector2 (cell.uvR, cell.uvB);
-            Vector2 uvLB = new Vector2 (cell.uvL, cell.uvB);
-            Vector2 uvC = Vector2.Lerp (uvLB, uvRT, 0.5f);
-            if (flipH && flipV) {
-                mesh.uv = new Vector2[]{ uvRB,uvLB,uvLT,uvRT,uvC,};
-            } else if (flipH) {
-                mesh.uv = new Vector2[]{ uvRT,uvLT,uvLB,uvRB,uvC,};
-            } else if (flipV) {
-                mesh.uv = new Vector2[]{ uvLB,uvRB,uvRT,uvLT,uvC,};
-            } else {
-                mesh.uv = new Vector2[]{ uvLT,uvRT,uvRB,uvLB,uvC,};
-            }
+			Vector2 uvLT = new Vector2 (cell.uvL, cell.uvT);
+			Vector2 uvRT = new Vector2 (cell.uvR, cell.uvT);
+			Vector2 uvRB = new Vector2 (cell.uvR, cell.uvB);
+			Vector2 uvLB = new Vector2 (cell.uvL, cell.uvB);
+			Vector2 uvC = Vector2.Lerp (uvLB, uvRT, 0.5f);
+			mesh.uv = new Vector2[]{ uvLT,uvRT,uvRB,uvLB,uvC,};
 
-            float uv2y = (float)colorBlendValue + 0.01f;
-            mesh.uv2 = new Vector2[]
+			float uv2y = (float)colorBlendValue + 0.01f;
+			mesh.uv2 = new Vector2[]
             {
 				new Vector2 (opacity * rateLT, uv2y),
 				new Vector2 (opacity * rateRT, uv2y),
@@ -282,8 +288,8 @@ namespace SpriteStudioForUnity
                 3, 0, 4,
             };
 
-            Color colorC = Color.Lerp (Color.Lerp (colorLB, colorRB, 0.5f), Color.Lerp (colorLT, colorRT, 0.5f), 0.5f);
-            mesh.colors32 = new Color32[]
+			Color colorC = Color.Lerp (Color.Lerp (colorLB, colorRB, 0.5f), Color.Lerp (colorLT, colorRT, 0.5f), 0.5f);
+			mesh.colors32 = new Color32[]
             {
                 colorLT,
                 colorRT,
