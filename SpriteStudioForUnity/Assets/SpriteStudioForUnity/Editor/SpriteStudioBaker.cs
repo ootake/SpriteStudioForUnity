@@ -411,7 +411,7 @@ namespace SpriteStudioForUnity
 						for (int i = 0; i < attribute.key.Length; i++) {
 							SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
 							float time = GetTime (key.time, clip.frameRate);
-							float value = GetBoolValue (key);
+							float value = GetValue (key) == 0 ? 1 : 0;
 							if (i == 0 && time != 0) {
 								curve.AddKey (KeyframeUtil.GetNew (0, 0, TangentMode.Stepped));
 							}
@@ -698,14 +698,6 @@ namespace SpriteStudioForUnity
 			return value;
 		}
 
-		float GetBoolValue (SpriteStudioAnimePackAnimePartAnimeAttributeKey key)
-		{
-			float value = 0;
-			if (key.value.Text.Length == 1)
-				value = float.Parse (key.value.Text [0]) == 0 ? 1 : 0;
-			return value;
-		}
-
 		Vector2 GetVector2 (string str)
 		{
 			string[] split = str.Split (' ');
@@ -820,7 +812,7 @@ namespace SpriteStudioForUnity
 			for (int i = 0; i < attribute.key.Length; i++) {
 				SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
 				float time = GetTime (key.time, fps);
-				float value = GetBoolValue (key);
+				float value = GetValue (key);
 				if (i == 0) {
 					curve.AddKey (KeyframeUtil.GetNew (time, value, TangentMode.Stepped));
 				} else if (i == attribute.key.Length - 1) {
