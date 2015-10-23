@@ -1,0 +1,1266 @@
+fileFormatVersion: 2
+guid: 30e15035509424b9aa75cf55bd5eeb3f
+timeCreated: 1445598465
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: aura
+    21300002: balllight
+    21300004: circle1
+    21300006: circle2
+    21300008: circle3
+    21300010: cloud
+    21300012: comet1
+    21300014: comet2
+    21300016: comet3
+    21300018: confetti
+    21300020: dot1
+    21300022: dot2
+    21300024: dot3
+    21300026: droplet
+    21300028: dust1
+    21300030: dust2
+    21300032: explosion1
+    21300034: explosion2
+    21300036: explosion3
+    21300038: explosion4
+    21300040: explosion5
+    21300042: feather
+    21300044: fire
+    21300046: fivepartiesstar1
+    21300048: fivepartiesstar2
+    21300050: flame
+    21300052: flash1
+    21300054: flash2
+    21300056: flash3
+    21300058: flash5
+    21300060: flash6
+    21300062: flash7
+    21300064: flash8
+    21300066: flashhole
+    21300068: fllash4
+    21300070: flower1
+    21300072: flower2
+    21300074: flower3
+    21300076: form
+    21300078: galaxy
+    21300080: grain
+    21300082: hart
+    21300084: haze1
+    21300086: haze2
+    21300088: haze3
+    21300090: haze4
+    21300092: hazecircle
+    21300094: hexagon1
+    21300096: hexagon2
+    21300098: hole
+    21300100: ice1
+    21300102: ice2
+    21300104: ice3
+    21300106: jewel
+    21300108: light1
+    21300110: light2
+    21300112: magiccircle1
+    21300114: magiccircle2
+    21300116: minus
+    21300118: petal
+    21300120: plus
+    21300122: ray1
+    21300124: ray2
+    21300126: ray3
+    21300128: ring
+    21300130: ring1
+    21300132: ring2
+    21300134: ring3
+    21300136: ripple1
+    21300138: ripple2
+    21300140: rock1
+    21300142: rock2
+    21300144: rock3
+    21300146: rock4
+    21300148: rock5
+    21300150: sand
+    21300152: sixpartiesstar
+    21300154: slash
+    21300156: smoke1
+    21300158: smoke2
+    21300160: smork3
+    21300162: smork4
+    21300164: snowcristal
+    21300166: splash1
+    21300168: splash2
+    21300170: square1
+    21300172: square2
+    21300174: star1
+    21300176: star2
+    21300178: starbow
+    21300180: steam
+    21300182: thunder1
+    21300184: thunder2
+    21300186: thunder3
+    21300188: thunder4
+    21300190: triangle1
+    21300192: triangle2
+    21300194: vortex1
+    21300196: vortex2
+    21300198: vortex3
+    21300200: vortex4
+    21300202: wave1
+    21300204: wave2
+    21300206: wave3
+    21300208: wheel1
+    21300210: wheel2
+    21300212: wheellight1
+    21300214: wheellight2
+    21300216: wind1
+    21300218: wind2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 0
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: aura
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 1726
+        width: 230
+        height: 128
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: balllight
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 687
+        width: 239
+        height: 239
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: circle1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 82
+        height: 86
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: circle2
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1696
+        width: 90
+        height: 89
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: circle3
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 51
+        width: 58
+        height: 58
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloud
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1548
+        width: 256
+        height: 237
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: comet1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1423
+        width: 56
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: comet2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 743
+        width: 208
+        height: 227
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: comet3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1423
+        width: 42
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: confetti
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 5
+        width: 93
+        height: 103
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dot1
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1415
+        width: 4
+        height: 4
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dot2
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1413
+        width: 6
+        height: 6
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dot3
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1409
+        width: 10
+        height: 10
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: droplet
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 779
+        width: 125
+        height: 128
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dust1
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 1591
+        width: 227
+        height: 213
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dust2
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 268
+        width: 212
+        height: 225
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion1
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 152
+        width: 181
+        height: 182
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion2
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 986
+        width: 183
+        height: 183
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion3
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1535
+        width: 202
+        height: 187
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion4
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 4
+        width: 202
+        height: 205
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: explosion5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 877
+        width: 252
+        height: 254
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: feather
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 448
+        width: 122
+        height: 235
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1167
+        width: 61
+        height: 253
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fivepartiesstar1
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 996
+        width: 226
+        height: 214
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fivepartiesstar2
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 778
+        width: 226
+        height: 214
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flame
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1176
+        width: 250
+        height: 244
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1455
+        width: 245
+        height: 243
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash2
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 773
+        width: 132
+        height: 134
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash3
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1297
+        width: 217
+        height: 198
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash5
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 642
+        width: 128
+        height: 127
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 112
+        width: 247
+        height: 251
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash7
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 7
+        width: 201
+        height: 202
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flash8
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1683
+        width: 254
+        height: 101
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flashhole
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 113
+        width: 253
+        height: 250
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fllash4
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1214
+        width: 102
+        height: 108
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flower1
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1214
+        width: 109
+        height: 108
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flower2
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 24
+        width: 114
+        height: 124
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flower3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1692
+        width: 94
+        height: 93
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: form
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 974
+        width: 233
+        height: 233
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: galaxy
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 623
+        width: 242
+        height: 250
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: grain
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 130
+        width: 226
+        height: 236
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hart
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1326
+        width: 240
+        height: 218
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: haze1
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 1173
+        width: 196
+        height: 181
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: haze2
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 213
+        width: 218
+        height: 231
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: haze3
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1211
+        width: 250
+        height: 240
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: haze4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1788
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hazecircle
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1135
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hexagon1
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 4
+        width: 106
+        height: 122
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hexagon2
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1922
+        width: 106
+        height: 122
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hole
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1789
+        width: 255
+        height: 255
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ice1
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 1833
+        width: 190
+        height: 211
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ice2
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1358
+        width: 200
+        height: 173
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ice3
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 911
+        width: 101
+        height: 126
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jewel
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 338
+        width: 169
+        height: 169
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: light1
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 37
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: light2
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 1294
+        width: 204
+        height: 201
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magiccircle1
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 48
+        width: 60
+        height: 61
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: magiccircle2
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 930
+        width: 242
+        height: 242
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minus
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1396
+        width: 72
+        height: 9
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: petal
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1683
+        width: 50
+        height: 101
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: plus
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 30
+        width: 77
+        height: 78
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ray1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1423
+        width: 42
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ray2
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1209
+        width: 17
+        height: 242
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ray3
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1788
+        width: 42
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ring
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 459
+        width: 127
+        height: 126
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ring1
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 28
+        width: 120
+        height: 120
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ring2
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 517
+        width: 222
+        height: 222
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ring3
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 42
+        width: 222
+        height: 222
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ripple1
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1424
+        width: 255
+        height: 255
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ripple2
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1789
+        width: 247
+        height: 255
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock1
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 1928
+        width: 65
+        height: 116
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock2
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1680
+        width: 144
+        height: 152
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock3
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1731
+        width: 74
+        height: 123
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock4
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 1041
+        width: 103
+        height: 128
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock5
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 331
+        width: 123
+        height: 124
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sand
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1808
+        width: 236
+        height: 236
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sixpartiesstar
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1662
+        width: 114
+        height: 130
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1499
+        width: 143
+        height: 177
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: smoke1
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 370
+        width: 204
+        height: 249
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: smoke2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 915
+        width: 237
+        height: 248
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: smork3
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 1858
+        width: 248
+        height: 186
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: smork4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1395
+        width: 297
+        height: 284
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snowcristal
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1796
+        width: 106
+        height: 122
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: splash1
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 365
+        width: 173
+        height: 198
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: splash2
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 1091
+        width: 201
+        height: 199
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: square1
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1702
+        width: 83
+        height: 83
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: square2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 25
+        width: 83
+        height: 83
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: star1
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 4
+        width: 124
+        height: 122
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: star2
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 589
+        width: 162
+        height: 186
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: starbow
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1135
+        width: 251
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: steam
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 875
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: thunder1
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 497
+        width: 181
+        height: 230
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: thunder2
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 731
+        width: 188
+        height: 234
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: thunder3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 293
+        width: 115
+        height: 220
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: thunder4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1683
+        width: 180
+        height: 361
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: triangle1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 7
+        width: 97
+        height: 84
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: triangle2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 8
+        width: 97
+        height: 83
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vortex1
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 369
+        width: 240
+        height: 250
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vortex2
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1836
+        width: 170
+        height: 208
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vortex3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 615
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vortex4
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 567
+        width: 214
+        height: 207
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wave1
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 969
+        width: 63
+        height: 238
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wave2
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 779
+        width: 127
+        height: 128
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wave3
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 511
+        width: 127
+        height: 127
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wheel1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 622
+        width: 251
+        height: 251
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wheel2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 367
+        width: 251
+        height: 251
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wheellight1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 355
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wheellight2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 95
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wind1
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 160
+        width: 119
+        height: 167
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wind2
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1514
+        width: 181
+        height: 144
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
