@@ -14,7 +14,6 @@ namespace SpriteStudioForUnity
         public int parentIndex;
         [HideInInspector]
         public SpriteStudioPart parent;
-
         public PartType partType;
 		public PartBoundsType boundsType;
 		public PartAlphaBlendType alphaBlendType;
@@ -72,10 +71,9 @@ namespace SpriteStudioForUnity
 		public float anchorY;
 		public float sizeX;
 		public float sizeY;	
-
 		public SpriteStudioCell cell;
+		[HideInInspector]
 		public SpriteStudioController controller;
-
 		MeshRenderer meshRenderer;
 		MeshFilter meshFilter;
         Mesh mesh;
@@ -85,6 +83,7 @@ namespace SpriteStudioForUnity
 		void Start ()
 		{
 			meshRenderer = GetComponent<MeshRenderer> ();
+			meshRenderer.sortingOrder = arrayIndex;
 			meshFilter = GetComponent<MeshFilter> ();
             mesh = new Mesh();
             mesh.MarkDynamic();
@@ -123,7 +122,7 @@ namespace SpriteStudioForUnity
 
             if (sortingOrder != _sortingOrder) {
                 _sortingOrder = sortingOrder;
-                meshRenderer.sortingOrder = (int)sortingOrder * 10 + arrayIndex;
+                meshRenderer.sortingOrder = (int)sortingOrder * 100 + arrayIndex;
             }
 
 			if (inheritType == PartInheritType.Parent) {
@@ -272,7 +271,7 @@ namespace SpriteStudioForUnity
 				new Vector2 (opacity * rateRT, uv2y),
 				new Vector2 (opacity * rateRB, uv2y),
 				new Vector2 (opacity * rateLB, uv2y),
-				new Vector2 (opacity * rateLT, uv2y),
+				new Vector2 (opacity * (rateLT + rateRT + rateRB + rateLB) / 4, uv2y),
             };
 
 			mesh.triangles = new int[]
