@@ -27,8 +27,6 @@ namespace SpriteStudioForUnity
 		public string path;
 		public float alpha = 1;
 		float _alpha;
-		public float sortingOrder;
-		float _sortingOrder;
 		public float rotationX;
 		float _rotationX;
 		public float rotationY;
@@ -83,7 +81,6 @@ namespace SpriteStudioForUnity
 		void Start ()
 		{
 			meshRenderer = GetComponent<MeshRenderer> ();
-			meshRenderer.sortingOrder = arrayIndex;
 			meshFilter = GetComponent<MeshFilter> ();
 			mesh = new Mesh ();
 			mesh.MarkDynamic ();
@@ -119,11 +116,6 @@ namespace SpriteStudioForUnity
 				meshRenderer.enabled = false;
 				return;
 			}            
-
-			if (sortingOrder != _sortingOrder) {
-				_sortingOrder = sortingOrder;
-				meshRenderer.sortingOrder = (int)sortingOrder * 100 + arrayIndex;
-			}
 
 			if (inheritType == PartInheritType.Parent) {
 				SpriteStudioPart current = parent;

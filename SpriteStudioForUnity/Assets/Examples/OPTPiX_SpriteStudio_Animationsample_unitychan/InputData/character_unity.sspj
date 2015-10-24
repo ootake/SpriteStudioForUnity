@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SpriteStudioProject version="1.00.03">
+<SpriteStudioProject version="1.02.00">
 	<name>character_template1</name>
 	<exportPath></exportPath>
 	<settings>
 		<animeBaseDirectory></animeBaseDirectory>
 		<cellMapBaseDirectory></cellMapBaseDirectory>
 		<imageBaseDirectory></imageBaseDirectory>
+		<effectBaseDirectory></effectBaseDirectory>
 		<exportBaseDirectory>../export</exportBaseDirectory>
 		<queryExportBaseDirectory>1</queryExportBaseDirectory>
 		<ssaxImport>
@@ -15,7 +16,7 @@
 		</ssaxImport>
 		<copyWhenImportImageIsOutside>1</copyWhenImportImageIsOutside>
 		<exportAnimeFileFormat>SSP for Cocos2d-x (.ssba)</exportAnimeFileFormat>
-		<exportCellMapFileFormat></exportCellMapFileFormat>
+		<exportCellMapFileFormat>invalid</exportCellMapFileFormat>
 		<exportCellMap>0</exportCellMap>
 		<copyImageWhenExportCellmap>1</copyImageWhenExportCellmap>
 		<ssaxExport>
@@ -67,6 +68,7 @@
 			<item>BNDR</item>
 			<item>USER</item>
 		</availableAttributes>
+		<availableFeatures />
 		<defaultSetAttributes>
 			<item>POSX</item>
 			<item>POSY</item>
@@ -76,7 +78,14 @@
 		<wrapMode>clamp</wrapMode>
 		<filterMode>nearlest</filterMode>
 		<interpolationType>linear</interpolationType>
-		<renderingOutputDirectory></renderingOutputDirectory>
+		<renderingSettings>
+			<outputFolder></outputFolder>
+			<outputType>AVI</outputType>
+			<bgColor>FF606060</bgColor>
+			<addAnimeName>0</addAnimeName>
+			<addTimeStamp>0</addTimeStamp>
+			<addAlphaChanel>1</addAlphaChanel>
+		</renderingSettings>
 	</settings>
 	<animeSettings>
 		<fps>30</fps>
@@ -105,7 +114,7 @@
 		<value>unitykamen_2head.ssae</value>
 	</animepackNames>
 	<lastAnimeFile>unitychan_3head.ssae</lastAnimeFile>
-	<lastAnimeName>sit</lastAnimeName>
+	<lastAnimeName>attack1</lastAnimeName>
 	<lastCellMapFile>unity_3head.ssce</lastCellMapFile>
 	<lastCell>hip</lastCell>
 	<lastPart>root</lastPart>
