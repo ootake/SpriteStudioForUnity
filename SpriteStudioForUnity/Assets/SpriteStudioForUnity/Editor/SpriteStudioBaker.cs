@@ -197,21 +197,14 @@ namespace SpriteStudioForUnity
                
 				if (dataNode.type == "Emmiter") {
 					SpriteStudioEmitter emitter = nodeObj.AddComponent<SpriteStudioEmitter> ();
-
+					ParticleSystem ps = emitter.GetComponent<ParticleSystem> ();
+					SerializedObject so = new SerializedObject(ps);
 					foreach (SpriteStudioEffectEffectDataNodeBehaviorValue value in dataNode.behavior.list) {
 						if (value.name == "Basic") {
-							emitter.priority = value.priority;
-							emitter.maximumParticle = value.maximumParticle;
-							emitter.attimeCreate = value.attimeCreate;
-							emitter.lifetime = value.lifetime;
-							emitter.minSpeed = value.speed.value;
-							emitter.maxSpeed = value.speed.subvalue;
-							emitter.minLifespan = value.lifespan.value;
-							emitter.maxLifespan = value.lifespan.subvalue;
-							emitter.angle = value.angle;
-							emitter.angleVariance = value.angleVariance;
+//							so.FindProperty("").floatValue = 0;
 						}
 					}
+					so.ApplyModifiedProperties();
 				}
 
 
