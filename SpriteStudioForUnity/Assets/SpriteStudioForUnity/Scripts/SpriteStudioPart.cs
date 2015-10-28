@@ -58,9 +58,13 @@ namespace SpriteStudioForUnity
 		public float cellId = -1;
 		float _cellId = -1;
 		public Vector2 vertexLB;
+		Vector2 _vertexLB;
 		public Vector2 vertexRB;
+		Vector2 _vertexRB;
 		public Vector2 vertexLT;
+		Vector2 _vertexLT;
 		public Vector2 vertexRT;
+		Vector2 _vertexRT;
 		public float offsetX;
 		float _offsetX;
 		public float offsetY;
@@ -202,6 +206,26 @@ namespace SpriteStudioForUnity
 			}
 			if (offsetY != _offsetY) {
 				_offsetY = offsetY;
+				meshFlg = true;
+			}
+
+			if (vertexRB != _vertexRB) {
+				_vertexRB = vertexRB;
+				meshFlg = true;
+			}
+			
+			if (vertexLB != _vertexLB) {
+				_vertexLB = vertexLB;
+				meshFlg = true;
+			}
+
+			if (vertexLT != _vertexLT) {
+				_vertexLT = vertexLT;
+				meshFlg = true;
+			}
+
+			if (vertexRT != _vertexRT) {
+				_vertexRT = vertexRT;
 				meshFlg = true;
 			}
 
