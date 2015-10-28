@@ -611,17 +611,17 @@ namespace SpriteStudioForUnity
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve (part.path, typeof(SpriteStudioPart), "sizeY", curve);
 					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "BNDR");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						CircleCollider2D collider = part.GetComponent<CircleCollider2D> ();
-						if (collider == null) {
-							collider = part.gameObject.AddComponent<CircleCollider2D> ();
-							collider.enabled = false;
-						}
-						clip.SetCurve (part.path, typeof(SphereCollider), "radius", curve);
-					}
+//					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "BNDR");
+//					if (attribute != null) {
+//						AnimationCurve curve = new AnimationCurve ();
+//						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+//						CircleCollider2D collider = part.GetComponent<CircleCollider2D> ();
+//						if (collider == null) {
+//							collider = part.gameObject.AddComponent<CircleCollider2D> ();
+//							collider.enabled = false;
+//						}
+//						clip.SetCurve (part.path, typeof(CircleCollider2D), "radius", curve);
+//					}
 
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "USER");
 					if (attribute != null) {
