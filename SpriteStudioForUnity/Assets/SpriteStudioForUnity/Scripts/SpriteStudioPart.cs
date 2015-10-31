@@ -250,24 +250,24 @@ namespace SpriteStudioForUnity
 			float vL, vR, vB, vT;
 
 			if (flipH) {
-				vL = cell.size.x * (-0.5f + cell.pivot.x - offsetX) / cell.pixelPerUnit;
-				vR = cell.size.x * (0.5f + cell.pivot.x - offsetX) / cell.pixelPerUnit;
+				vL = cell.size.x * (-0.5f + cell.pivot.x - offsetX);
+				vR = cell.size.x * (0.5f + cell.pivot.x - offsetX);
 			} else {
-				vL = cell.size.x * (-0.5f - cell.pivot.x - offsetX) / cell.pixelPerUnit;
-				vR = cell.size.x * (0.5f - cell.pivot.x - offsetX) / cell.pixelPerUnit;
+				vL = cell.size.x * (-0.5f - cell.pivot.x - offsetX);
+				vR = cell.size.x * (0.5f - cell.pivot.x - offsetX);
 			}
 			if (flipV) {
-				vB = cell.size.y * (-0.5f + cell.pivot.y - offsetY) / cell.pixelPerUnit;
-				vT = cell.size.y * (0.5f + cell.pivot.y - offsetY) / cell.pixelPerUnit;
+				vB = cell.size.y * (-0.5f + cell.pivot.y - offsetY);
+				vT = cell.size.y * (0.5f + cell.pivot.y - offsetY);
 			} else {
-				vB = cell.size.y * (-0.5f - cell.pivot.y - offsetY) / cell.pixelPerUnit;
-				vT = cell.size.y * (0.5f - cell.pivot.y - offsetY) / cell.pixelPerUnit;
+				vB = cell.size.y * (-0.5f - cell.pivot.y - offsetY);
+				vT = cell.size.y * (0.5f - cell.pivot.y - offsetY);
 			}
             
-			Vector3 vLT = new Vector3 (vL + vertexLT.x / cell.pixelPerUnit, vT + vertexLT.y / cell.pixelPerUnit, 0.0f);
-			Vector3 vRT = new Vector3 (vR + vertexRT.x / cell.pixelPerUnit, vT + vertexRT.y / cell.pixelPerUnit, 0.0f);
-			Vector3 vRB = new Vector3 (vR + vertexRB.x / cell.pixelPerUnit, vB + vertexRB.y / cell.pixelPerUnit, 0.0f);
-			Vector3 vLB = new Vector3 (vL + vertexLB.x / cell.pixelPerUnit, vB + vertexLB.y / cell.pixelPerUnit, 0.0f);
+			Vector3 vLT = new Vector3 (vL + vertexLT.x, vT + vertexLT.y, 0.0f);
+			Vector3 vRT = new Vector3 (vR + vertexRT.x, vT + vertexRT.y, 0.0f);
+			Vector3 vRB = new Vector3 (vR + vertexRB.x, vB + vertexRB.y, 0.0f);
+			Vector3 vLB = new Vector3 (vL + vertexLB.x, vB + vertexLB.y, 0.0f);
 			Vector3 vC = Vector3.Lerp (Vector3.Lerp (vLB, vRB, 0.5f), Vector3.Lerp (vLT, vRT, 0.5f), 0.5f);
 			if (flipH && flipV) {
 				mesh.vertices = new Vector3[]{ vRB,vLB,vLT,vRT,vC,};

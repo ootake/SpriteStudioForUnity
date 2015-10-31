@@ -20,7 +20,6 @@ namespace SpriteStudioForUnity
 		public float uvR;
 		public float uvB;
 		public float uvT;
-		public int pixelPerUnit;
 
 		public void Calculate()
 		{

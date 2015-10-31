@@ -101,7 +101,7 @@ namespace SpriteStudioForUnity
 				importer.wrapMode = TextureWrapMode.Clamp;
 				importer.mipmapEnabled = false;
 				importer.spriteImportMode = SpriteImportMode.Multiple;
-				importer.spritePixelsPerUnit = pixelPerUnit;
+				importer.spritePixelsPerUnit = 1;
                     
 				List<SpriteMetaData> spritesheet = new List<SpriteMetaData> ();
 				Vector2 pixelSize = GetVector2 (cellMap.pixelSize);
@@ -169,7 +169,6 @@ namespace SpriteStudioForUnity
 				c.pos = GetVector2 (cell.pos);
 				c.pivot = GetVector2 (cell.pivot);
 				c.pixelSize = GetVector2 (cellMap.pixelSize);
-				c.pixelPerUnit = pixelPerUnit;
 				c.Calculate ();
 
 				cellList.Add (c);
@@ -228,6 +227,7 @@ namespace SpriteStudioForUnity
 		public void CreateAnimator (SpriteStudioAnimePack animePack)
 		{
 			GameObject controllerObj = new GameObject (animePack.name);
+			controllerObj.transform.localScale = new Vector3 (1.0f / pixelPerUnit, 1.0f / pixelPerUnit, 1.0f / pixelPerUnit);
 			SpriteStudioController controller = controllerObj.AddComponent<SpriteStudioController> ();
 
 			List<SpriteStudioCell> cellList = new List<SpriteStudioCell> ();
@@ -317,13 +317,13 @@ namespace SpriteStudioForUnity
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSX");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount, pixelPerUnit);
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve (part.path, typeof(Transform), "localPosition.x", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSY");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount, pixelPerUnit);
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
 						clip.SetCurve (part.path, typeof(Transform), "localPosition.y", curve);
 					}
 
@@ -331,7 +331,7 @@ namespace SpriteStudioForUnity
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSZ");
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -pixelPerUnit, (float)part.arrayIndex * 0.0001f);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, (float)part.arrayIndex * 0.0001f);
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						}
 					}
@@ -398,7 +398,7 @@ namespace SpriteStudioForUnity
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PRIO");
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -100, (float)part.arrayIndex * 0.0001f);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, (float)part.arrayIndex * 0.0001f);
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						}
 					}
@@ -695,7 +695,7 @@ namespace SpriteStudioForUnity
 			return value;
 		}
 
-		void SetFloatCurve (AnimationCurve curve, SpriteStudioAnimePackAnimePartAnimeAttribute attribute, float fps, int frameCount, int unit = 1, float baseValue = 0)
+		void SetFloatCurve (AnimationCurve curve, SpriteStudioAnimePackAnimePartAnimeAttribute attribute, float fps, int frameCount, float unit = 1.0f, float baseValue = 0)
 		{
 			List<float> keyList = new List<float> (frameCount);
 			SpriteStudioAnimePackAnimePartAnimeAttributeKey prevKey = null;
@@ -780,9 +780,9 @@ namespace SpriteStudioForUnity
 				float value = keyList [i];
 
 				if (i == 0) {
-					curve.AddKey (KeyframeUtil.GetNew (time, value / unit, TangentMode.Stepped));
+					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, TangentMode.Stepped));
 				} else if (i == keyList.Count - 1) {
-					curve.AddKey (KeyframeUtil.GetNew (time, value / unit, TangentMode.Stepped));
+					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, TangentMode.Stepped));
 				} else {
 					float prev = keyList [i - 1];
 					float next = keyList [i + 1];
@@ -790,7 +790,7 @@ namespace SpriteStudioForUnity
 					if (value == prev && value == next) {
 						continue;
 					}
-					curve.AddKey (KeyframeUtil.GetNew (time, baseValue + value / unit, TangentMode.Stepped));
+					curve.AddKey (KeyframeUtil.GetNew (time, baseValue + value * unit, TangentMode.Stepped));
 				}
 			}
 			curve.UpdateAllLinearTangents ();
