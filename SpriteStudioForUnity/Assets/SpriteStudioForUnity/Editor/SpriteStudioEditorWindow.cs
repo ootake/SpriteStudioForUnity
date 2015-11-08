@@ -3,9 +3,16 @@ using UnityEditor;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using CurveExtended;
 
 namespace SpriteStudioForUnity
 {
+	enum Interpolation
+	{
+		Step,
+		Linear
+	}
+
     public class SpriteStudioEditorWindow : EditorWindow
     {
         bool flg = true;
@@ -13,6 +20,7 @@ namespace SpriteStudioForUnity
         string outputFolderName = "OutputData";
         string projectFilePath;
         int pixelPerUnit = 100;
+		Interpolation interpolation = Interpolation.Step;
 
         [MenuItem("Window/SpriteStudioForUnity/Window")]
         static void OpenWindow()
@@ -48,8 +56,9 @@ namespace SpriteStudioForUnity
                 scrollPosition = scrollView.scrollPosition;
                 using (new EditorGUILayout.VerticalScope())
                 {                    
-                    outputFolderName = EditorGUILayout.TextField("Output Folder", outputFolderName);
+                    outputFolderName = EditorGUILayout.TextField("Output folder", outputFolderName);
                     pixelPerUnit = EditorGUILayout.IntField("Pixel per unit", pixelPerUnit);
+					interpolation = (Interpolation)EditorGUILayout.EnumPopup("Curve interpolation", interpolation);
                 }
                 if (GUILayout.Button("Import"))
                 {
@@ -78,6 +87,8 @@ namespace SpriteStudioForUnity
             SpriteStudioBaker baker = new SpriteStudioBaker();
             baker.pixelPerUnit = pixelPerUnit;
             baker.sourceDirectory = Path.GetDirectoryName(projectFilePath);
+
+			baker.tangentMode = this.interpolation == Interpolation.Step ? TangentMode.Stepped : TangentMode.Linear;
 
             CreateFolders(baker);
             result = DeserializeProject(baker);

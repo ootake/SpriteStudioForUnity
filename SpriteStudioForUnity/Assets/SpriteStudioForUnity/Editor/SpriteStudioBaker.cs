@@ -23,6 +23,7 @@ namespace SpriteStudioForUnity
 		public string animationsDirectory;
 		public string prefabsDirectory;
 		public int pixelPerUnit = 100;
+		public TangentMode tangentMode = TangentMode.Stepped;
 		public string sourceDirectory;
 		public SpriteStudioProject projectData;
 		public List<SpriteStudioCellMap> cellMapList;
@@ -331,7 +332,7 @@ namespace SpriteStudioForUnity
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSZ");
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, (float)part.arrayIndex * 0.0001f);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f * pixelPerUnit, (float)part.arrayIndex * 0.0001f);
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						}
 					}
@@ -493,7 +494,6 @@ namespace SpriteStudioForUnity
 								rateRT = key.value.RT.rate;
 							}
 
-							TangentMode tangentMode = TangentMode.Linear;
 							curveBlend.AddKey (KeyframeUtil.GetNew (time, coorBlendValue, tangentMode));
 							curveLBR.AddKey (KeyframeUtil.GetNew (time, valueLBR, tangentMode));
 							curveLBG.AddKey (KeyframeUtil.GetNew (time, valueLBG, tangentMode));
@@ -557,14 +557,14 @@ namespace SpriteStudioForUnity
 							Vector2 vertexRB = GetVector2 (key.value.RB.Text [0]);
 							Vector2 vertexLT = GetVector2 (key.value.LT.Text [0]);
 							Vector2 vertexRT = GetVector2 (key.value.RT.Text [0]);
-							curveLBX.AddKey (KeyframeUtil.GetNew (time, vertexLB.x, TangentMode.Stepped));
-							curveLBY.AddKey (KeyframeUtil.GetNew (time, vertexLB.y, TangentMode.Stepped));
-							curveRBX.AddKey (KeyframeUtil.GetNew (time, vertexRB.x, TangentMode.Stepped));
-							curveRBY.AddKey (KeyframeUtil.GetNew (time, vertexRB.y, TangentMode.Stepped));
-							curveLTX.AddKey (KeyframeUtil.GetNew (time, vertexLT.x, TangentMode.Stepped));
-							curveLTY.AddKey (KeyframeUtil.GetNew (time, vertexLT.y, TangentMode.Stepped));
-							curveRTX.AddKey (KeyframeUtil.GetNew (time, vertexRT.x, TangentMode.Stepped));
-							curveRTY.AddKey (KeyframeUtil.GetNew (time, vertexRT.y, TangentMode.Stepped));
+							curveLBX.AddKey (KeyframeUtil.GetNew (time, vertexLB.x, tangentMode));
+							curveLBY.AddKey (KeyframeUtil.GetNew (time, vertexLB.y, tangentMode));
+							curveRBX.AddKey (KeyframeUtil.GetNew (time, vertexRB.x, tangentMode));
+							curveRBY.AddKey (KeyframeUtil.GetNew (time, vertexRB.y, tangentMode));
+							curveLTX.AddKey (KeyframeUtil.GetNew (time, vertexLT.x, tangentMode));
+							curveLTY.AddKey (KeyframeUtil.GetNew (time, vertexLT.y, tangentMode));
+							curveRTX.AddKey (KeyframeUtil.GetNew (time, vertexRT.x, tangentMode));
+							curveRTY.AddKey (KeyframeUtil.GetNew (time, vertexRT.y, tangentMode));
 						}
 						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexLB.x", curveLBX);
 						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexLB.y", curveLBY);
@@ -780,9 +780,9 @@ namespace SpriteStudioForUnity
 				float value = keyList [i];
 
 				if (i == 0) {
-					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, TangentMode.Stepped));
+					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, tangentMode));
 				} else if (i == keyList.Count - 1) {
-					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, TangentMode.Stepped));
+					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, tangentMode));
 				} else {
 					float prev = keyList [i - 1];
 					float next = keyList [i + 1];
@@ -790,7 +790,7 @@ namespace SpriteStudioForUnity
 					if (value == prev && value == next) {
 						continue;
 					}
-					curve.AddKey (KeyframeUtil.GetNew (time, baseValue + value * unit, TangentMode.Stepped));
+					curve.AddKey (KeyframeUtil.GetNew (time, baseValue + value * unit, tangentMode));
 				}
 			}
 			curve.UpdateAllLinearTangents ();
