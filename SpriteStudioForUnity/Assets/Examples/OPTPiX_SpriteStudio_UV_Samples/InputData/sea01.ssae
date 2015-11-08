@@ -1,0 +1,5228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioAnimePack version="1.00.00">
+	<settings>
+		<fps>30</fps>
+		<frameCount>11</frameCount>
+		<sortMode>prio</sortMode>
+		<canvasSize>320 320</canvasSize>
+		<pivot>0 0</pivot>
+		<bgColor>FF323232</bgColor>
+		<gridSize>32</gridSize>
+		<gridColor>FF808080</gridColor>
+		<outStartNum>0</outStartNum>
+	</settings>
+	<name>UV_test01</name>
+	<exportPath></exportPath>
+	<Model>
+		<partList>
+			<value>
+				<name>root</name>
+				<arrayIndex>0</arrayIndex>
+				<parentIndex>-1</parentIndex>
+				<type>null</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea</name>
+				<arrayIndex>1</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>null</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_01</name>
+				<arrayIndex>2</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_02</name>
+				<arrayIndex>3</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_03</name>
+				<arrayIndex>4</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_04</name>
+				<arrayIndex>5</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_05</name>
+				<arrayIndex>6</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_06</name>
+				<arrayIndex>7</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_07</name>
+				<arrayIndex>8</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_08</name>
+				<arrayIndex>9</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_09</name>
+				<arrayIndex>10</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_10</name>
+				<arrayIndex>11</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_11</name>
+				<arrayIndex>12</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_12</name>
+				<arrayIndex>13</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_13</name>
+				<arrayIndex>14</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_14</name>
+				<arrayIndex>15</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_15</name>
+				<arrayIndex>16</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>undersea_16</name>
+				<arrayIndex>17</arrayIndex>
+				<parentIndex>1</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea</name>
+				<arrayIndex>18</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>null</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_01</name>
+				<arrayIndex>19</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_02</name>
+				<arrayIndex>20</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_03</name>
+				<arrayIndex>21</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_04</name>
+				<arrayIndex>22</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_05</name>
+				<arrayIndex>23</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_06</name>
+				<arrayIndex>24</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_07</name>
+				<arrayIndex>25</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_08</name>
+				<arrayIndex>26</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_09</name>
+				<arrayIndex>27</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_10</name>
+				<arrayIndex>28</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_11</name>
+				<arrayIndex>29</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_12</name>
+				<arrayIndex>30</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_13</name>
+				<arrayIndex>31</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_14</name>
+				<arrayIndex>32</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_15</name>
+				<arrayIndex>33</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea1_16</name>
+				<arrayIndex>34</arrayIndex>
+				<parentIndex>18</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2</name>
+				<arrayIndex>35</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>null</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_01</name>
+				<arrayIndex>36</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_02</name>
+				<arrayIndex>37</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_03</name>
+				<arrayIndex>38</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_04</name>
+				<arrayIndex>39</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_05</name>
+				<arrayIndex>40</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_06</name>
+				<arrayIndex>41</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_07</name>
+				<arrayIndex>42</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_08</name>
+				<arrayIndex>43</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_09</name>
+				<arrayIndex>44</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_10</name>
+				<arrayIndex>45</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_11</name>
+				<arrayIndex>46</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_12</name>
+				<arrayIndex>47</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_13</name>
+				<arrayIndex>48</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_14</name>
+				<arrayIndex>49</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_15</name>
+				<arrayIndex>50</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+			<value>
+				<name>sea2_16</name>
+				<arrayIndex>51</arrayIndex>
+				<parentIndex>35</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+			</value>
+		</partList>
+	</Model>
+	<cellmapNames>
+		<value>sea01.ssce</value>
+		<value>sea02.ssce</value>
+	</cellmapNames>
+	<animeList>
+		<anime>
+			<name>anime 1</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>30</fps>
+				<frameCount>400</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>512 512</canvasSize>
+				<pivot>0 0</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>32</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_01</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_02</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_03</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_04</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_05</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_06</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_07</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_08</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_09</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_10</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_11</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_12</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_13</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_14</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_15</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>undersea_16</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>undersea</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="60" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="100" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="320" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="60" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="100" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="320" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="60" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="100" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="320" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="60">
+								<value>0</value>
+							</key>
+							<key time="100">
+								<value>0</value>
+							</key>
+							<key time="199">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+							<key time="280">
+								<value>0</value>
+							</key>
+							<key time="320">
+								<value>0</value>
+							</key>
+							<key time="399">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_01</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_02</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_03</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_04</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_05</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_06</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_07</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_08</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_09</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_10</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_11</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_12</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_13</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_14</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_15</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea1_16</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>0</mapId>
+									<name>sea1</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">36.2000007629395 0.0493093729019165 -34.5999984741211 -0.0174033045768738</curve>
+								<value>0.5</value>
+							</key>
+							<key time="60" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -24.7999992370605 0.0116022229194641</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="100" ipType="bezier">
+								<curve syncStartEnd="0">19.6000003814697 0 -39.2000007629395 0.0145027935504913</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="199" ipType="bezier">
+								<curve syncStartEnd="0">17.5 0.00290054082870483 -10.3000001907349 0.00580108165740967</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">15.0999994277954 0 0 0</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="280" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="320" ipType="bezier">
+								<curve syncStartEnd="0">36.5 -0.00290054082870483 -47.5 -0.00580111145973206</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0</curve>
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>2</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2</partName>
+					<attributes>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="130" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="350" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="130" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="350" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="130" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="350" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="130">
+								<value>0</value>
+							</key>
+							<key time="199">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+							<key time="350">
+								<value>0</value>
+							</key>
+							<key time="399">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_01</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_02</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_03</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_04</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_05</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_06</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_07</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_08</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_09</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_10</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_11</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>5</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_12</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_13</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_14</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>-64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_15</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>64</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>64</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>sea2_16</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+							<key time="200">
+								<value>
+									<mapId>1</mapId>
+									<name>sea3</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>192</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>-192</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>-192</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="ALPH">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">22.9000015258789 0.0232044160366058 -23.6000003814697 0.00290054082870483</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="40" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -9.60000038146973 0</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="130" ipType="bezier">
+								<curve syncStartEnd="0">41 -0.0116022229194641 -38.0999984741211 0.0145027637481689</curve>
+								<value>0.600000023841858</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+							<key time="200" ipType="bezier">
+								<curve syncStartEnd="0">26.1000003814697 0.0232044160366058 -31.2000007629395 -0.0116022229194641</curve>
+								<value>0.400000005960464</value>
+							</key>
+							<key time="260" ipType="linear">
+								<value>0.699999988079071</value>
+							</key>
+							<key time="350" ipType="bezier">
+								<curve syncStartEnd="0">30.7000007629395 -0.00870168209075928 -16.3999996185303 0</curve>
+								<value>0.699999988079071</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.400000005960464</value>
+							</key>
+						</attribute>
+						<attribute tag="PRIO">
+							<key time="0" ipType="linear">
+								<value>4</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="200">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTX">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>-0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>-0.25</value>
+							</key>
+						</attribute>
+						<attribute tag="UVTY">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="199" ipType="linear">
+								<value>0.25</value>
+							</key>
+							<key time="200" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="399" ipType="linear">
+								<value>0.25</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+	</animeList>
+</SpriteStudioAnimePack>

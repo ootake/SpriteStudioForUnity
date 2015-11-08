@@ -72,7 +72,14 @@ namespace SpriteStudioForUnity
 		public float anchorX;
 		public float anchorY;
 		public float sizeX;
+		float _sizeX;
 		public float sizeY;
+		float _sizeY;
+		public float uvTX;
+		float _uvTX;
+		public float uvTY;
+		float _uvTY;
+
 		public SpriteStudioCell cell;
 		[HideInInspector]
 		public SpriteStudioController controller;
@@ -81,7 +88,7 @@ namespace SpriteStudioForUnity
 		Mesh mesh;
 		float opacity = 1;
 		float _opacity = 1;
-		bool isVertex4 = false;
+		bool isTriangle4 = false;
 
 		void Start ()
 		{
@@ -90,7 +97,7 @@ namespace SpriteStudioForUnity
 			mesh = new Mesh ();
 			mesh.MarkDynamic ();
 			meshFilter.sharedMesh = mesh;
-			UpdateMeshTriangle2 ();
+			UpdateMesh ();
 		}
 		
 		void Update ()
@@ -212,188 +219,177 @@ namespace SpriteStudioForUnity
 
 			if (vertexRB != _vertexRB) {
 				_vertexRB = vertexRB;
-				isVertex4 = true;
+				isTriangle4 = true;
 				meshFlg = true;
 			}
 			
 			if (vertexLB != _vertexLB) {
 				_vertexLB = vertexLB;
-				isVertex4 = true;
+				isTriangle4 = true;
 				meshFlg = true;
 			}
 
 			if (vertexLT != _vertexLT) {
 				_vertexLT = vertexLT;
-				isVertex4 = true;
+				isTriangle4 = true;
 				meshFlg = true;
 			}
 
 			if (vertexRT != _vertexRT) {
 				_vertexRT = vertexRT;
 				meshFlg = true;
-				isVertex4 = true;
+				isTriangle4 = true;
 			}
 
+			if (uvTX != _uvTX) {
+				_uvTX = uvTX;
+				meshFlg = true;
+			}
+
+			if (uvTY != _uvTY) {
+				_uvTY = uvTY;
+				meshFlg = true;
+			}
+
+			if (sizeX != _sizeX) {
+				_sizeX = sizeX;
+				meshFlg = true;
+			}
+
+			if (sizeY != _sizeY) {
+				_sizeY = sizeY;
+				meshFlg = true;
+			}
 
 			if (materialFlg) {
 				UpdateMaterial ();
 			}
 			if (meshFlg) {
-				if(isVertex4){
-					UpdateMeshTriangle4 ();
-				}else{
-					UpdateMeshTriangle2 ();
+				UpdateMesh ();
+			}
+		}
+
+		void UpdateMesh ()
+		{
+			mesh.Clear ();
+
+			if (cell == null)
+				return;
+
+			mesh.name = cell.name;
+
+			float vL, vR, vB, vT;
+			Vector2 size = cell.size;
+			if (sizeX != 0) {
+				size.x = sizeX;
+			}
+			if (sizeY != 0) {
+				size.y = sizeY;
+			}
+			if (flipH) {
+				vL = size.x * (-0.5f + cell.pivot.x - offsetX);
+				vR = size.x * (0.5f + cell.pivot.x - offsetX);
+			} else {
+				vL = size.x * (-0.5f - cell.pivot.x - offsetX);
+				vR = size.x * (0.5f - cell.pivot.x - offsetX);
+			}
+			if (flipV) {
+				vB = size.y * (-0.5f + cell.pivot.y - offsetY);
+				vT = size.y * (0.5f + cell.pivot.y - offsetY);
+			} else {
+				vB = size.y * (-0.5f - cell.pivot.y - offsetY);
+				vT = size.y * (0.5f - cell.pivot.y - offsetY);
+			}            
+			Vector3 vLT = new Vector3 (vL + vertexLT.x, vT + vertexLT.y, 0.0f);
+			Vector3 vRT = new Vector3 (vR + vertexRT.x, vT + vertexRT.y, 0.0f);
+			Vector3 vRB = new Vector3 (vR + vertexRB.x, vB + vertexRB.y, 0.0f);
+			Vector3 vLB = new Vector3 (vL + vertexLB.x, vB + vertexLB.y, 0.0f);
+
+			Vector2 uvLT = new Vector2 (cell.uvL + uvTX, cell.uvT - uvTY);
+			Vector2 uvRT = new Vector2 (cell.uvR + uvTX, cell.uvT - uvTY);
+			Vector2 uvRB = new Vector2 (cell.uvR + uvTX, cell.uvB - uvTY);
+			Vector2 uvLB = new Vector2 (cell.uvL + uvTX, cell.uvB - uvTY);
+			float uv2y = (float)colorBlendValue + 0.01f;
+
+			if (isTriangle4) {
+				Vector3 vC = Vector3.Lerp (Vector3.Lerp (vLB, vRB, 0.5f), Vector3.Lerp (vLT, vRT, 0.5f), 0.5f);
+				if (flipH && flipV) {
+					mesh.vertices = new Vector3[]{ vRB,vLB,vLT,vRT,vC,};
+				} else if (flipH) {
+					mesh.vertices = new Vector3[]{ vRT,vLT,vLB,vRB,vC,};
+				} else if (flipV) {
+					mesh.vertices = new Vector3[]{ vLB,vRB,vRT,vLT,vC,};
+				} else {
+					mesh.vertices = new Vector3[]{ vLT,vRT,vRB,vLB,vC,};
 				}
-			}
-		}
 
-		void UpdateMeshTriangle2 () 
-		{
-			mesh.Clear ();
-			
-			if (cell == null)
-				return;
-			
-			mesh.name = cell.name;
-			
-			float vL, vR, vB, vT;
-			
-			if (flipH) {
-				vL = cell.size.x * (-0.5f + cell.pivot.x - offsetX);
-				vR = cell.size.x * (0.5f + cell.pivot.x - offsetX);
+				Vector2 uvC = Vector2.Lerp (uvLB, uvRT, 0.5f);
+				mesh.uv = new Vector2[]{ 
+					uvLT,
+					uvRT,
+					uvRB,
+					uvLB,
+					uvC,
+				};
+				mesh.uv2 = new Vector2[]
+				{
+					new Vector2 (opacity * rateLT, uv2y),
+					new Vector2 (opacity * rateRT, uv2y),
+					new Vector2 (opacity * rateRB, uv2y),
+					new Vector2 (opacity * rateLB, uv2y),
+					new Vector2 (opacity * (rateLT + rateRT + rateRB + rateLB) / 4, uv2y),
+				};
+				mesh.triangles = new int[]
+				{
+					0, 1, 4,
+					1, 2, 4,
+					2, 3, 4,
+					3, 0, 4,
+				};
+				mesh.colors32 = new Color32[]
+				{
+					colorLT,
+					colorRT,
+					colorRB,
+					colorLB,
+					Color.Lerp (Color.Lerp (colorLB, colorRB, 0.5f), Color.Lerp (colorLT, colorRT, 0.5f), 0.5f),
+				};
 			} else {
-				vL = cell.size.x * (-0.5f - cell.pivot.x - offsetX);
-				vR = cell.size.x * (0.5f - cell.pivot.x - offsetX);
+				if (flipH && flipV) {
+					mesh.vertices = new Vector3[]{ vRB,vLB,vLT,vRT,};
+				} else if (flipH) {
+					mesh.vertices = new Vector3[]{ vRT,vLT,vLB,vRB,};
+				} else if (flipV) {
+					mesh.vertices = new Vector3[]{ vLB,vRB,vRT,vLT,};
+				} else {
+					mesh.vertices = new Vector3[]{ vLT,vRT,vRB,vLB,};
+				}
+				mesh.uv = new Vector2[]{ 
+					uvLT,
+					uvRT,
+					uvRB,
+					uvLB,
+				};
+				mesh.uv2 = new Vector2[]
+				{
+					new Vector2 (opacity * rateLT, uv2y),
+					new Vector2 (opacity * rateRT, uv2y),
+					new Vector2 (opacity * rateRB, uv2y),
+					new Vector2 (opacity * rateLB, uv2y),
+				};
+				mesh.triangles = new int[]
+				{
+					0, 1, 2,
+					2, 3, 0,
+				};
+				mesh.colors32 = new Color32[]
+				{
+					colorLT,
+					colorRT,
+					colorRB,
+					colorLB,
+				};
 			}
-			if (flipV) {
-				vB = cell.size.y * (-0.5f + cell.pivot.y - offsetY);
-				vT = cell.size.y * (0.5f + cell.pivot.y - offsetY);
-			} else {
-				vB = cell.size.y * (-0.5f - cell.pivot.y - offsetY);
-				vT = cell.size.y * (0.5f - cell.pivot.y - offsetY);
-			}
-			
-			Vector3 vLT = new Vector3 (vL + vertexLT.x, vT + vertexLT.y, 0.0f);
-			Vector3 vRT = new Vector3 (vR + vertexRT.x, vT + vertexRT.y, 0.0f);
-			Vector3 vRB = new Vector3 (vR + vertexRB.x, vB + vertexRB.y, 0.0f);
-			Vector3 vLB = new Vector3 (vL + vertexLB.x, vB + vertexLB.y, 0.0f);
-			if (flipH && flipV) {
-				mesh.vertices = new Vector3[]{ vRB,vLB,vLT,vRT,};
-			} else if (flipH) {
-				mesh.vertices = new Vector3[]{ vRT,vLT,vLB,vRB,};
-			} else if (flipV) {
-				mesh.vertices = new Vector3[]{ vLB,vRB,vRT,vLT,};
-			} else {
-				mesh.vertices = new Vector3[]{ vLT,vRT,vRB,vLB,};
-			}
-			
-			Vector2 uvLT = new Vector2 (cell.uvL, cell.uvT);
-			Vector2 uvRT = new Vector2 (cell.uvR, cell.uvT);
-			Vector2 uvRB = new Vector2 (cell.uvR, cell.uvB);
-			Vector2 uvLB = new Vector2 (cell.uvL, cell.uvB);
-			mesh.uv = new Vector2[]{ uvLT,uvRT,uvRB,uvLB,};
-			
-			float uv2y = (float)colorBlendValue + 0.01f;
-			mesh.uv2 = new Vector2[]
-			{
-				new Vector2 (opacity * rateLT, uv2y),
-				new Vector2 (opacity * rateRT, uv2y),
-				new Vector2 (opacity * rateRB, uv2y),
-				new Vector2 (opacity * rateLB, uv2y),
-			};
-			
-			mesh.triangles = new int[]
-			{
-				0, 1, 2,
-				2, 3, 0,
-			};
-			
-			mesh.colors32 = new Color32[]
-			{
-				colorLT,
-				colorRT,
-				colorRB,
-				colorLB,
-			};
-			
-			mesh.RecalculateNormals ();
-		}
-
-		void UpdateMeshTriangle4 ()
-		{
-			mesh.Clear ();
-
-			if (cell == null)
-				return;
-
-			mesh.name = cell.name;
-
-			float vL, vR, vB, vT;
-
-			if (flipH) {
-				vL = cell.size.x * (-0.5f + cell.pivot.x - offsetX);
-				vR = cell.size.x * (0.5f + cell.pivot.x - offsetX);
-			} else {
-				vL = cell.size.x * (-0.5f - cell.pivot.x - offsetX);
-				vR = cell.size.x * (0.5f - cell.pivot.x - offsetX);
-			}
-			if (flipV) {
-				vB = cell.size.y * (-0.5f + cell.pivot.y - offsetY);
-				vT = cell.size.y * (0.5f + cell.pivot.y - offsetY);
-			} else {
-				vB = cell.size.y * (-0.5f - cell.pivot.y - offsetY);
-				vT = cell.size.y * (0.5f - cell.pivot.y - offsetY);
-			}
-            
-			Vector3 vLT = new Vector3 (vL + vertexLT.x, vT + vertexLT.y, 0.0f);
-			Vector3 vRT = new Vector3 (vR + vertexRT.x, vT + vertexRT.y, 0.0f);
-			Vector3 vRB = new Vector3 (vR + vertexRB.x, vB + vertexRB.y, 0.0f);
-			Vector3 vLB = new Vector3 (vL + vertexLB.x, vB + vertexLB.y, 0.0f);
-			Vector3 vC = Vector3.Lerp (Vector3.Lerp (vLB, vRB, 0.5f), Vector3.Lerp (vLT, vRT, 0.5f), 0.5f);
-			if (flipH && flipV) {
-				mesh.vertices = new Vector3[]{ vRB,vLB,vLT,vRT,vC,};
-			} else if (flipH) {
-				mesh.vertices = new Vector3[]{ vRT,vLT,vLB,vRB,vC,};
-			} else if (flipV) {
-				mesh.vertices = new Vector3[]{ vLB,vRB,vRT,vLT,vC,};
-			} else {
-				mesh.vertices = new Vector3[]{ vLT,vRT,vRB,vLB,vC,};
-			}
-
-			Vector2 uvLT = new Vector2 (cell.uvL, cell.uvT);
-			Vector2 uvRT = new Vector2 (cell.uvR, cell.uvT);
-			Vector2 uvRB = new Vector2 (cell.uvR, cell.uvB);
-			Vector2 uvLB = new Vector2 (cell.uvL, cell.uvB);
-			Vector2 uvC = Vector2.Lerp (uvLB, uvRT, 0.5f);
-			mesh.uv = new Vector2[]{ uvLT,uvRT,uvRB,uvLB,uvC,};
-
-			float uv2y = (float)colorBlendValue + 0.01f;
-			mesh.uv2 = new Vector2[]
-            {
-				new Vector2 (opacity * rateLT, uv2y),
-				new Vector2 (opacity * rateRT, uv2y),
-				new Vector2 (opacity * rateRB, uv2y),
-				new Vector2 (opacity * rateLB, uv2y),
-				new Vector2 (opacity * (rateLT + rateRT + rateRB + rateLB) / 4, uv2y),
-            };
-
-			mesh.triangles = new int[]
-			{
-                0, 1, 4,
-                1, 2, 4,
-                2, 3, 4,
-                3, 0, 4,
-            };
-
-			Color colorC = Color.Lerp (Color.Lerp (colorLB, colorRB, 0.5f), Color.Lerp (colorLT, colorRT, 0.5f), 0.5f);
-			mesh.colors32 = new Color32[]
-            {
-                colorLT,
-                colorRT,
-                colorRB,
-                colorLB,
-                colorC,
-            };
 
 			mesh.RecalculateNormals ();
 		}

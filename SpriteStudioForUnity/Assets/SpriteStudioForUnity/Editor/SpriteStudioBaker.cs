@@ -331,9 +331,10 @@ namespace SpriteStudioForUnity
 
 					if(animePack.settings.sortMode == "z"){
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSZ");
+						float baseValue = (float)part.arrayIndex * -0.01f;
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f * pixelPerUnit, (float)part.arrayIndex * 0.0001f);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -1f, baseValue);
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						}
 					}
@@ -398,9 +399,16 @@ namespace SpriteStudioForUnity
 
 					if(animePack.settings.sortMode == "prio"){
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PRIO");
+						float baseValue = (float)part.arrayIndex * -0.01f;
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, (float)part.arrayIndex * 0.0001f);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -1f, baseValue);
+							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
+						} else {
+							AnimationCurve curve = new AnimationCurve ();
+							float endTime = GetTime (frameCount - 1, clip.frameRate);
+							curve.AddKey (KeyframeUtil.GetNew (0, baseValue, TangentMode.Stepped));
+							curve.AddKey (KeyframeUtil.GetNew (endTime, baseValue, TangentMode.Stepped));
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						}
 					}
@@ -623,6 +631,18 @@ namespace SpriteStudioForUnity
 //						}
 //						clip.SetCurve (part.path, typeof(CircleCollider2D), "radius", curve);
 //					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "UVTX");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SpriteStudioPart), "uvTX", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "UVTY");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SpriteStudioPart), "uvTY", curve);
+					}
 
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "USER");
 					if (attribute != null) {
