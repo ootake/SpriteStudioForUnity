@@ -331,10 +331,10 @@ namespace SpriteStudioForUnity
 
 					if(animePack.settings.sortMode == "z"){
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSZ");
-						float baseValue = (float)part.arrayIndex * -0.01f;
+						float baseValue = (float)part.arrayIndex * -0.0001f;
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -1f, baseValue);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, baseValue);
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						}
 					}
@@ -399,10 +399,10 @@ namespace SpriteStudioForUnity
 
 					if(animePack.settings.sortMode == "prio"){
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PRIO");
-						float baseValue = (float)part.arrayIndex * -0.01f;
+						float baseValue = (float)part.arrayIndex * -0.0001f;
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -1f, baseValue);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, baseValue);
 							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
 						} else {
 							AnimationCurve curve = new AnimationCurve ();
@@ -801,9 +801,9 @@ namespace SpriteStudioForUnity
 				float value = keyList [i];
 
 				if (i == 0) {
-					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, tangentMode));
+					curve.AddKey (KeyframeUtil.GetNew (time, baseValue + value * unit, tangentMode));
 				} else if (i == keyList.Count - 1) {
-					curve.AddKey (KeyframeUtil.GetNew (time, value * unit, tangentMode));
+					curve.AddKey (KeyframeUtil.GetNew (time,baseValue +  value * unit, tangentMode));
 				} else {
 					float prev = keyList [i - 1];
 					float next = keyList [i + 1];
