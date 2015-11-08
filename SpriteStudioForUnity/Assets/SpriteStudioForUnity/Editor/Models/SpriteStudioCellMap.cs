@@ -2,6 +2,7 @@
 {
     public partial class SpriteStudioCellMap
     {
+		public string cellmapName;
         public string name;
         public object exportPath;
         public string generator;

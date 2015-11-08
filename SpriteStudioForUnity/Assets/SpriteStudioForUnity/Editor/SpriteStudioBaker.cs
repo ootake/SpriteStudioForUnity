@@ -51,6 +51,7 @@ namespace SpriteStudioForUnity
 				foreach(SpriteStudioCellMapCell cell in cellMap.cells){
 					cell.name = cell.name.Replace("\r", "").Replace("\n", "");
 				}
+				cellMap.cellmapName = Path.GetFileName(path);
 				cellMapList.Add (cellMap);
 			}
 		}
@@ -178,7 +179,7 @@ namespace SpriteStudioForUnity
 				AssetDatabase.Refresh ();
 			}
             
-			cellMaps [cellMap.name] = cellList;
+			cellMaps [cellMap.cellmapName] = cellList;
 		}
 
 		public void CreateEffect (SpriteStudioEffect effect)
@@ -235,8 +236,8 @@ namespace SpriteStudioForUnity
 			int mapId = 0;
 			int cellId = 0;
 			foreach (string cellmapName in animePack.cellmapNames) {
-				SpriteStudioCellMap cellMap = cellMapList.FirstOrDefault (u => u.name == Path.GetFileNameWithoutExtension (cellmapName));
-				List<SpriteStudioCell> cells = cellMaps [cellMap.name];
+				SpriteStudioCellMap cellMap = cellMapList.FirstOrDefault (u => u.cellmapName == cellmapName);
+				List<SpriteStudioCell> cells = cellMaps [cellMap.cellmapName];
 				foreach (SpriteStudioCell cell in cells) {
 					cell.mapId = mapId;
 					cell.cellId = cellId;
