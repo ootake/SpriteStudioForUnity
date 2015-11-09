@@ -90,7 +90,6 @@ namespace SpriteStudioForUnity
 
 			baker.tangentMode = this.interpolation == Interpolation.Step ? TangentMode.Stepped : TangentMode.Linear;
 
-            CreateFolders(baker);
             result = DeserializeProject(baker);
 
             if (result)
@@ -99,40 +98,53 @@ namespace SpriteStudioForUnity
                 result = DeserializeEffects(baker);
             if (result)
                 result = DeserializeAnimePacks(baker);
-            if (result)
-                result = CreateTextures(baker);
-            if (result)
-                result = CreateMaterials(baker);
-            if (result)
-                result = CreateCellDatas(baker);
-            if (result)
-                result = CreateEffects(baker);
-            if (result)
-                result = CreateAnimations(baker);
+
+			string guid = AssetDatabase.CreateFolder("Assets", outputFolderName);
+			baker.destDirectory = AssetDatabase.GUIDToAssetPath (guid);
+
+			if (result) {
+				if(baker.cellMapList.Count != 0) {
+					guid = AssetDatabase.CreateFolder(baker.destDirectory, "Textures");
+					baker.texturesDirectory = AssetDatabase.GUIDToAssetPath(guid);
+					result = CreateTextures (baker);
+				}
+			}
+			if (result) {
+				if(baker.cellMapList.Count != 0) {
+					guid = AssetDatabase.CreateFolder(baker.destDirectory, "Materials");
+					baker.materialsDirectory = AssetDatabase.GUIDToAssetPath(guid);
+					result = CreateMaterials (baker);
+				}
+			}
+			if (result) {
+				if(baker.cellMapList.Count != 0) {
+					guid = AssetDatabase.CreateFolder(baker.destDirectory, "Cells");
+					baker.cellDataDirectory = AssetDatabase.GUIDToAssetPath(guid);
+					result = CreateCellDatas (baker);
+				}
+			}
+            if (result) {
+				if(baker.effectList.Count != 0) {
+					guid = AssetDatabase.CreateFolder(baker.destDirectory, "Effects");
+					baker.effectDirectory = AssetDatabase.GUIDToAssetPath(guid);
+					result = CreateEffects (baker);
+				}
+			}
+			if (result) {
+				if(baker.animePackList.Count != 0) {
+					guid = AssetDatabase.CreateFolder(baker.destDirectory, "Animations");
+					baker.animationsDirectory = AssetDatabase.GUIDToAssetPath(guid);
+					guid = AssetDatabase.CreateFolder(baker.destDirectory, "Prefabs");
+					baker.prefabsDirectory = AssetDatabase.GUIDToAssetPath(guid);
+					result = CreateAnimations (baker);
+				}
+			}
 
             AssetDatabase.Refresh();
             EditorUtility.ClearProgressBar();
 
             if (result)
                 EditorUtility.DisplayDialog("Sprite Studio For Unity", "Complate", "OK");
-        }
-
-        void CreateFolders(SpriteStudioBaker baker)
-        {
-            string guid = AssetDatabase.CreateFolder("Assets", outputFolderName);
-            baker.destDirectory = AssetDatabase.GUIDToAssetPath(guid);
-            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Textures");
-            baker.texturesDirectory = AssetDatabase.GUIDToAssetPath(guid);
-            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Materials");
-            baker.materialsDirectory = AssetDatabase.GUIDToAssetPath(guid);
-            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Cells");
-            baker.cellDataDirectory = AssetDatabase.GUIDToAssetPath(guid);
-            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Effects");
-            baker.effectDirectory = AssetDatabase.GUIDToAssetPath(guid);
-            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Animations");
-            baker.animationsDirectory = AssetDatabase.GUIDToAssetPath(guid);
-            guid = AssetDatabase.CreateFolder(baker.destDirectory, "Prefabs");
-            baker.prefabsDirectory = AssetDatabase.GUIDToAssetPath(guid);
         }
 
         bool DeserializeProject(SpriteStudioBaker baker)

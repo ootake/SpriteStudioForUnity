@@ -229,7 +229,6 @@ namespace SpriteStudioForUnity
 		public void CreateAnimator (SpriteStudioAnimePack animePack)
 		{
 			GameObject controllerObj = new GameObject (animePack.name);
-			controllerObj.transform.localScale = new Vector3 (1.0f / pixelPerUnit, 1.0f / pixelPerUnit, 1.0f / pixelPerUnit);
 			SpriteStudioController controller = controllerObj.AddComponent<SpriteStudioController> ();
 
 			List<SpriteStudioCell> cellList = new List<SpriteStudioCell> ();
@@ -685,6 +684,7 @@ namespace SpriteStudioForUnity
 				}
 			}
                 
+			controllerObj.transform.localScale = new Vector3 (1.0f / pixelPerUnit, 1.0f / pixelPerUnit, 1.0f / pixelPerUnit);
 			string prefabPath = prefabsDirectory + "/" + controllerObj.name + ".prefab";
 			PrefabUtility.CreatePrefab (prefabPath, controllerObj);
                 
