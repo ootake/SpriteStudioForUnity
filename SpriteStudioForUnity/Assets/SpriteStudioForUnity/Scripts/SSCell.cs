@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace SpriteStudioForUnity
 {
-	public class SpriteStudioCell : ScriptableObject
+	public class SSCell : ScriptableObject
 	{
 		public int mapName;
 		public int mapId;

@@ -29,7 +29,7 @@ public class SampleManager : MonoBehaviour {
 		case ShowType.Queue: {
 			if(prefabList.Count >= 1){
 				GameObject obj = GameObject.Instantiate(prefabList[0]);
-				currentAnimator = obj.GetComponent<Animator>();
+				currentAnimator = obj.GetComponentInChildren<Animator>();
 			}
 			break;
 		}
@@ -47,9 +47,9 @@ public class SampleManager : MonoBehaviour {
 					if(currentIndex == prefabList.Count){
 						currentAnimator = null;				
 					}else{
-						GameObject.Destroy(currentAnimator.gameObject);
+						GameObject.Destroy(currentAnimator.transform.parent.gameObject);
 						GameObject obj = GameObject.Instantiate(prefabList[currentIndex]);
-						currentAnimator = obj.GetComponent<Animator>();					
+						currentAnimator = obj.GetComponentInChildren<Animator>();					
 					}
 				}
 			}

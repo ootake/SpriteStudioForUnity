@@ -33,7 +33,7 @@ namespace SpriteStudioForUnity
 		public Dictionary<string, Material> mixMaterialDict;
 		public Dictionary<string, Material> mulMaterialDict;
 		public Dictionary<string, Material> subMaterialDict;
-		public Dictionary<string, List<SpriteStudioCell>> cellMaps;
+		public Dictionary<string, List<SSCell>> cellMaps;
 
 		public void DeserializeProject (string path)
 		{
@@ -157,11 +157,11 @@ namespace SpriteStudioForUnity
 
 		public void CreateCellData (SpriteStudioCellMap cellMap, int mapId)
 		{
-			List<SpriteStudioCell> cellList = new List<SpriteStudioCell> ();
+			List<SSCell> cellList = new List<SSCell> ();
 			string guid = AssetDatabase.CreateFolder (cellDataDirectory, cellMap.name);
 			string subDirectory = AssetDatabase.GUIDToAssetPath (guid);
 			foreach (SpriteStudioCellMapCell cell in cellMap.cells) {
-				SpriteStudioCell c = ScriptableObject.CreateInstance<SpriteStudioCell> ();
+				SSCell c = ScriptableObject.CreateInstance<SSCell> ();
 				c.mapId = mapId;
 				c.mixMaterial = mixMaterialDict [cellMap.name];
 				c.addMaterial = addMaterialDict [cellMap.name];
@@ -186,18 +186,18 @@ namespace SpriteStudioForUnity
 		{
 			GameObject effectObj = new GameObject (effect.name);
 
-			List<SpriteStudioEffectNode> nodeList = new List<SpriteStudioEffectNode> ();
+			List<SSEffectNode> nodeList = new List<SSEffectNode> ();
 			foreach (SpriteStudioEffectEffectDataNode dataNode in effect.effectData.nodeList) {
 				string name = dataNode.name;
 				if (dataNode.parentIndex != -1) {
 					name += "[" + dataNode.type + "]";
 				}
 				GameObject nodeObj = new GameObject (name);
-				SpriteStudioEffectNode node = nodeObj.AddComponent<SpriteStudioEffectNode> ();
+				SSEffectNode node = nodeObj.AddComponent<SSEffectNode> ();
 				node.arrayIndex = dataNode.arrayIndex;
                
 				if (dataNode.type == "Emmiter") {
-					SpriteStudioEmitter emitter = nodeObj.AddComponent<SpriteStudioEmitter> ();
+					SSEmitter emitter = nodeObj.AddComponent<SSEmitter> ();
 					ParticleSystem ps = emitter.GetComponent<ParticleSystem> ();
 					SerializedObject so = new SerializedObject(ps);
 					foreach (SpriteStudioEffectEffectDataNodeBehaviorValue value in dataNode.behavior.list) {
@@ -209,7 +209,7 @@ namespace SpriteStudioForUnity
 				}
 
 
-				SpriteStudioEffectNode parentNode = nodeList.FirstOrDefault (v => v.arrayIndex == dataNode.parentIndex);
+				SSEffectNode parentNode = nodeList.FirstOrDefault (v => v.arrayIndex == dataNode.parentIndex);
 				if (parentNode != null) {
 					node.gameObject.transform.parent = parentNode.gameObject.transform;
 				} else {
@@ -229,15 +229,19 @@ namespace SpriteStudioForUnity
 		public void CreateAnimator (SpriteStudioAnimePack animePack)
 		{
 			GameObject controllerObj = new GameObject (animePack.name);
-			SpriteStudioController controller = controllerObj.AddComponent<SpriteStudioController> ();
+			SSController controller = controllerObj.AddComponent<SSController> ();
 
-			List<SpriteStudioCell> cellList = new List<SpriteStudioCell> ();
+			GameObject animatorObj = new GameObject ("animator");
+			animatorObj.transform.parent = controllerObj.transform;
+			AnimationEventListener listener = animatorObj.AddComponent<AnimationEventListener> ();
+
+			List<SSCell> cellList = new List<SSCell> ();
 			int mapId = 0;
 			int cellId = 0;
 			foreach (string cellmapName in animePack.cellmapNames) {
 				SpriteStudioCellMap cellMap = cellMapList.FirstOrDefault (u => u.cellmapName == cellmapName);
-				List<SpriteStudioCell> cells = cellMaps [cellMap.cellmapName];
-				foreach (SpriteStudioCell cell in cells) {
+				List<SSCell> cells = cellMaps [cellMap.cellmapName];
+				foreach (SSCell cell in cells) {
 					cell.mapId = mapId;
 					cell.cellId = cellId;
 					cellList.Add (cell);
@@ -247,11 +251,11 @@ namespace SpriteStudioForUnity
 			}
 			controller.cellList = cellList;
 
-			List<SpriteStudioPart> partList = new List<SpriteStudioPart> ();
+			List<SSPart> partList = new List<SSPart> ();
                 
 			foreach (SpriteStudioAnimePackModelValue model in animePack.Model.partList) {
 				GameObject partObj = new GameObject (model.name);
-				SpriteStudioPart part = partObj.AddComponent<SpriteStudioPart> ();
+				SSPart part = partObj.AddComponent<SSPart> ();
 				part.controller = controller;
 				part.name = model.name;
 				part.arrayIndex = model.arrayIndex;
@@ -271,10 +275,10 @@ namespace SpriteStudioForUnity
 				partList.Add (part);
 
 				if (part.parentIndex == -1) {
-					partObj.transform.parent = controllerObj.transform;
+					partObj.transform.parent = listener.transform;
 					part.path = part.name;
 				} else {
-					SpriteStudioPart parentPart = partList.SingleOrDefault (v => v.arrayIndex == model.parentIndex);
+					SSPart parentPart = partList.SingleOrDefault (v => v.arrayIndex == model.parentIndex);
 					if (parentPart != null) {
 						partObj.transform.parent = parentPart.transform;
 						part.path = parentPart.path + "/" + part.name;
@@ -285,7 +289,7 @@ namespace SpriteStudioForUnity
 
 			string animatorPath = animationsDirectory + "/" + animePack.name + ".controller";
 			AnimatorController animatorController = AnimatorController.CreateAnimatorControllerAtPath (animatorPath);                   
-			Animator animator = controllerObj.GetComponent<Animator> ();
+			Animator animator = listener.GetComponent<Animator> ();
 			animator.runtimeAnimatorController = animatorController;
 
 			foreach (SpriteStudioAnimePackAnime packAnime in animePack.animeList) {
@@ -302,7 +306,7 @@ namespace SpriteStudioForUnity
 				AssetDatabase.AddObjectToAsset (clip, animatorController);
                     
 				foreach (SpriteStudioAnimePackAnimePartAnime partAnime in packAnime.partAnimes) {
-					SpriteStudioPart part = partList.SingleOrDefault (v => v.name == partAnime.partName);
+					SSPart part = partList.SingleOrDefault (v => v.name == partAnime.partName);
 					SpriteStudioAnimePackAnimePartAnimeAttribute attribute = null;
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "CELL");
 					if (attribute != null) {
@@ -310,118 +314,85 @@ namespace SpriteStudioForUnity
 						for (int i = 0; i < attribute.key.Length; i++) {
 							SpriteStudioAnimePackAnimePartAnimeAttributeKey key = attribute.key [i];
 							float time = GetTime (key.time, clip.frameRate);
-							SpriteStudioCell cell = cellList.SingleOrDefault (v => v.mapId == key.value.mapId && v.name == key.value.name);
+							SSCell cell = cellList.SingleOrDefault (v => v.mapId == key.value.mapId && v.name == key.value.name);
 							curveCellId.AddKey (KeyframeUtil.GetNew (time, (float)cell.cellId, TangentMode.Stepped));
 						}
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "cellId", curveCellId);
+						clip.SetCurve (part.path, typeof(SSPart), "cellId", curveCellId);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSX");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(Transform), "localPosition.x", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "pos.x", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSY");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(Transform), "localPosition.y", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "pos.y", curve);
 					}
-
 					if(animePack.settings.sortMode == "z"){
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "POSZ");
-						float baseValue = (float)part.arrayIndex * -0.0001f;
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, baseValue);
-							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+							clip.SetCurve (part.path, typeof(SSPart), "pos.z", curve);
+						}
+					}else if(animePack.settings.sortMode == "prio"){
+						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PRIO");
+						if (attribute != null) {
+							AnimationCurve curve = new AnimationCurve ();
+							SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+							clip.SetCurve (part.path, typeof(SSPart), "pos.z", curve);
 						}
 					}
-
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ROTX");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rotationX", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "rot.x", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ROTY");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rotationY", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "rot.y", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ROTZ");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rotationZ", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "rot.z", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SCLX");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(Transform), "localScale.x", curve);
-					} else {
-						AnimationCurve curve = new AnimationCurve ();
-						float endTime = GetTime (frameCount - 1, clip.frameRate);
-						curve.AddKey (KeyframeUtil.GetNew (0, 1, TangentMode.Stepped));
-						curve.AddKey (KeyframeUtil.GetNew (endTime, 1, TangentMode.Stepped));
-						clip.SetCurve (part.path, typeof(Transform), "localScale.x", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "scl.x", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SCLY");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(Transform), "localScale.y", curve);
-					} else {
-						AnimationCurve curve = new AnimationCurve ();
-						float endTime = GetTime (frameCount - 1, clip.frameRate);
-						curve.AddKey (KeyframeUtil.GetNew (0, 1, TangentMode.Stepped));
-						curve.AddKey (KeyframeUtil.GetNew (endTime, 1, TangentMode.Stepped));
-						clip.SetCurve (part.path, typeof(Transform), "localScale.y", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "scl.y", curve);
 					}
-
-					{
-						AnimationCurve curve = new AnimationCurve ();
-						float endTime = GetTime (frameCount - 1, clip.frameRate);
-						curve.AddKey (KeyframeUtil.GetNew (0, 1, TangentMode.Stepped));
-						curve.AddKey (KeyframeUtil.GetNew (endTime, 1, TangentMode.Stepped));
-						clip.SetCurve (part.path, typeof(Transform), "localScale.z", curve);
-					}
-
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ALPH");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "alpha", curve);
-					}
-
-					if(animePack.settings.sortMode == "prio"){
-						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PRIO");
-						float baseValue = (float)part.arrayIndex * -0.0001f;
-						if (attribute != null) {
-							AnimationCurve curve = new AnimationCurve ();
-							SetFloatCurve (curve, attribute, clip.frameRate, frameCount, -0.01f, baseValue);
-							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
-						} else {
-							AnimationCurve curve = new AnimationCurve ();
-							float endTime = GetTime (frameCount - 1, clip.frameRate);
-							curve.AddKey (KeyframeUtil.GetNew (0, baseValue, TangentMode.Stepped));
-							curve.AddKey (KeyframeUtil.GetNew (endTime, baseValue, TangentMode.Stepped));
-							clip.SetCurve (part.path, typeof(Transform), "localPosition.z", curve);
-						}
+						clip.SetCurve (part.path, typeof(SSPart), "alpha", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "FLPH");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetBoolCurve (curve, attribute, clip.frameRate);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "flipH", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "flpH", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "FLPV");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetBoolCurve (curve, attribute, clip.frameRate);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "flipV", curve);
+						clip.SetCurve (part.path, typeof(SSPart), "flpV", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "HIDE");
 					if (attribute != null) {
@@ -440,6 +411,54 @@ namespace SpriteStudioForUnity
 						AnimationCurve curve = new AnimationCurve ();
 						curve.AddKey (KeyframeUtil.GetNew (0, 0, TangentMode.Stepped));
 						clip.SetCurve (part.path, typeof(MeshRenderer), "m_Enabled", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PVTX");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "pvt.x", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PVTY");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "pvt.y", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ANCX");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "anc.x", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ANCY");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "anc.y", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SIZX");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "siz.x", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SIZY");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "siz.y", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "UVTX");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "uvt.x", curve);
+					}
+					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "UVTY");
+					if (attribute != null) {
+						AnimationCurve curve = new AnimationCurve ();
+						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+						clip.SetCurve (part.path, typeof(SSPart), "uvt.y", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "VCOL");
 					if (attribute != null) {
@@ -526,27 +545,27 @@ namespace SpriteStudioForUnity
 							curveRateRT.AddKey (KeyframeUtil.GetNew (time, valueRTA, tangentMode));
 						}
 
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorBlendValue", curveBlend);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLB.r", curveLBR);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLB.g", curveLBG);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLB.b", curveLBB);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLB.a", curveLBA);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRB.r", curveRBR);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRB.g", curveRBG);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRB.b", curveRBB);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRB.a", curveRBA);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLT.r", curveLTR);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLT.g", curveLTG);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLT.b", curveLTB);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorLT.a", curveLTA);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRT.r", curveRTR);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRT.g", curveRTG);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRT.b", curveRTB);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "colorRT.a", curveRTA);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rateLB", curveRateLB);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rateRB", curveRateRB);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rateLT", curveRateLT);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "rateRT", curveRateRT);
+						clip.SetCurve (part.path, typeof(SSPart), "uv2Y", curveBlend);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLB.r", curveLBR);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLB.g", curveLBG);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLB.b", curveLBB);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLB.a", curveLBA);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRB.r", curveRBR);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRB.g", curveRBG);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRB.b", curveRBB);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRB.a", curveRBA);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLT.r", curveLTR);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLT.g", curveLTG);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLT.b", curveLTB);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolLT.a", curveLTA);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRT.r", curveRTR);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRT.g", curveRTG);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRT.b", curveRTB);
+						clip.SetCurve (part.path, typeof(SSPart), "vcolRT.a", curveRTA);
+						clip.SetCurve (part.path, typeof(SSPart), "uv2XLB", curveRateLB);
+						clip.SetCurve (part.path, typeof(SSPart), "uv2XRB", curveRateRB);
+						clip.SetCurve (part.path, typeof(SSPart), "uv2XLT", curveRateLT);
+						clip.SetCurve (part.path, typeof(SSPart), "uv2XRT", curveRateRT);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "VERT");
 					if (attribute != null) {
@@ -574,51 +593,16 @@ namespace SpriteStudioForUnity
 							curveRTX.AddKey (KeyframeUtil.GetNew (time, vertexRT.x, tangentMode));
 							curveRTY.AddKey (KeyframeUtil.GetNew (time, vertexRT.y, tangentMode));
 						}
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexLB.x", curveLBX);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexLB.y", curveLBY);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexRB.x", curveRBX);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexRB.y", curveRBY);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexLT.x", curveLTX);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexLT.y", curveLTY);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexRT.x", curveRTX);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "vertexRT.y", curveRTY);
+						clip.SetCurve (part.path, typeof(SSPart), "vertLB.x", curveLBX);
+						clip.SetCurve (part.path, typeof(SSPart), "vertLB.y", curveLBY);
+						clip.SetCurve (part.path, typeof(SSPart), "vertRB.x", curveRBX);
+						clip.SetCurve (part.path, typeof(SSPart), "vertRB.y", curveRBY);
+						clip.SetCurve (part.path, typeof(SSPart), "vertLT.x", curveLTX);
+						clip.SetCurve (part.path, typeof(SSPart), "vertLT.y", curveLTY);
+						clip.SetCurve (part.path, typeof(SSPart), "vertRT.x", curveRTX);
+						clip.SetCurve (part.path, typeof(SSPart), "vertRT.y", curveRTY);
 					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PVTX");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "offsetX", curve);
-					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PVTY");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "offsetY", curve);
-					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ANCX");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "anchorX", curve);
-					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ANCY");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "anchorY", curve);
-					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SIZX");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "sizeX", curve);
-					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SIZY");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "sizeY", curve);
-					}
+
 //					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "BNDR");
 //					if (attribute != null) {
 //						AnimationCurve curve = new AnimationCurve ();
@@ -630,18 +614,6 @@ namespace SpriteStudioForUnity
 //						}
 //						clip.SetCurve (part.path, typeof(CircleCollider2D), "radius", curve);
 //					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "UVTX");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "uvTX", curve);
-					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "UVTY");
-					if (attribute != null) {
-						AnimationCurve curve = new AnimationCurve ();
-						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SpriteStudioPart), "uvTY", curve);
-					}
 
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "USER");
 					if (attribute != null) {

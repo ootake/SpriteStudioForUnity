@@ -298,7 +298,7 @@ namespace SpriteStudioForUnity
 
         bool CreateCellDatas(SpriteStudioBaker baker)
         {
-            baker.cellMaps = new Dictionary<string, List<SpriteStudioCell>>();
+            baker.cellMaps = new Dictionary<string, List<SSCell>>();
 
             if (baker.cellMapList == null)
                 return true;

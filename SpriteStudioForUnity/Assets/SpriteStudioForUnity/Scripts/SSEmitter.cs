@@ -3,19 +3,19 @@ using System.Collections;
 
 namespace SpriteStudioForUnity
 {
-    public class SpriteStudioEffectNode : MonoBehaviour
+	[RequireComponent(typeof(ParticleSystem))]
+    public class SSEmitter : MonoBehaviour
     {
-        public int arrayIndex;
+//        public ParticleSystem particleSystem;
 
         void Start()
         {
-            
+//			particleSystem = GetComponent<ParticleSystem> ();
         }
-        
+
         void Update()
         {
             
         }
     }
 }
-
