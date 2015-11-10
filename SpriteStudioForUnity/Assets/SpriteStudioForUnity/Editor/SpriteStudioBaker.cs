@@ -287,6 +287,8 @@ namespace SpriteStudioForUnity
 				}
 			}
 
+			controller.partList = partList;
+
 			string animatorPath = animationsDirectory + "/" + animePack.name + ".controller";
 			AnimatorController animatorController = AnimatorController.CreateAnimatorControllerAtPath (animatorPath);                   
 			Animator animator = listener.GetComponent<Animator> ();

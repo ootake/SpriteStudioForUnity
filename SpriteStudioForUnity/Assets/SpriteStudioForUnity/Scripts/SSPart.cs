@@ -84,7 +84,9 @@ namespace SpriteStudioForUnity
 		float opacity = 1;
 		float _opacity = 1;
 		bool isTriangle4 = false;
+		public bool flipX;
 		bool _flipX;
+		public bool flipY;
 		bool _flipY;
 
 		void Start ()
@@ -120,14 +122,14 @@ namespace SpriteStudioForUnity
 				localPosition.z = pos.z * -0.01f + arrayIndex * -0.0001f;
 				transform.localPosition = localPosition;
 			}
-			if (controller.flipX != _flipX) {
-				_flipX = controller.flipX;
+			if (flipX != _flipX) {
+				_flipX = flipX;
 				Vector3 localPosition = transform.localPosition;
 				localPosition.z *= -1;
 				transform.localPosition = localPosition;
 			}
-			if (controller.flipY != _flipY) {
-				_flipY = controller.flipY;
+			if (flipY != _flipY) {
+				_flipY = flipY;
 				Vector3 localPosition = transform.localPosition;
 				localPosition.z *= -1;
 				transform.localPosition = localPosition;
