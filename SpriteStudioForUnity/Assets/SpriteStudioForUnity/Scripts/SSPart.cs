@@ -113,25 +113,34 @@ namespace SpriteStudioForUnity
 				Vector3 localPosition = transform.localPosition;
 				localPosition.y = pos.y;
 				transform.localPosition = localPosition;
-			}			
+			}	
+			bool zFlg = false;
 			if (pos.z != _pos.z) {
 				_pos.z = pos.z;
-				Vector3 localPosition = transform.localPosition;
-				localPosition.z = pos.z * -0.01f + arrayIndex * -0.0001f;
-				transform.localPosition = localPosition;
+				zFlg = true;
 			}
 			if (flipX != _flipX) {
 				_flipX = flipX;
-				Vector3 localPosition = transform.localPosition;
-				localPosition.z *= -1;
-				transform.localPosition = localPosition;
+				zFlg = true;
 			}
 			if (flipY != _flipY) {
 				_flipY = flipY;
-				Vector3 localPosition = transform.localPosition;
-				localPosition.z *= -1;
-				transform.localPosition = localPosition;
+				zFlg = true;
 			}
+
+			if (zFlg) {
+				if((flipX && !flipY) || (!flipX && flipY)){
+					Vector3 localPosition = transform.localPosition;
+					localPosition.z = pos.z * 0.01f + arrayIndex * 0.0001f;
+					transform.localPosition = localPosition;
+				}else{
+					Vector3 localPosition = transform.localPosition;
+					localPosition.z = pos.z * -0.01f + arrayIndex * -0.0001f;
+					transform.localPosition = localPosition;
+				}
+			}
+
+
 			if (rot.x != _rot.x) {
 				_rot.x = rot.x;
 				Vector3 localEulerAngles = transform.localEulerAngles;
