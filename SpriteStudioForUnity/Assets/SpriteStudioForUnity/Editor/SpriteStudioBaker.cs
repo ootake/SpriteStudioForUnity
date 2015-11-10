@@ -339,12 +339,24 @@ namespace SpriteStudioForUnity
 							AnimationCurve curve = new AnimationCurve ();
 							SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
 							clip.SetCurve (part.path, typeof(SSPart), "pos.z", curve);
+						} else {
+							AnimationCurve curve = new AnimationCurve ();
+							float endTime = GetTime (frameCount - 1, clip.frameRate);
+							curve.AddKey (KeyframeUtil.GetNew (0, 0, TangentMode.Stepped));
+							curve.AddKey (KeyframeUtil.GetNew (endTime, 0, TangentMode.Stepped));
+							clip.SetCurve (part.path, typeof(SSPart), "pos.z", curve);
 						}
 					}else if(animePack.settings.sortMode == "prio"){
 						attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "PRIO");
 						if (attribute != null) {
 							AnimationCurve curve = new AnimationCurve ();
 							SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
+							clip.SetCurve (part.path, typeof(SSPart), "pos.z", curve);
+						} else {
+							AnimationCurve curve = new AnimationCurve ();
+							float endTime = GetTime (frameCount - 1, clip.frameRate);
+							curve.AddKey (KeyframeUtil.GetNew (0, 0, TangentMode.Stepped));
+							curve.AddKey (KeyframeUtil.GetNew (endTime, 0, TangentMode.Stepped));
 							clip.SetCurve (part.path, typeof(SSPart), "pos.z", curve);
 						}
 					}
@@ -370,15 +382,33 @@ namespace SpriteStudioForUnity
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SSPart), "scl.x", curve);
+						clip.SetCurve (part.path, typeof(Transform), "localScale.x", curve);
+					}else {
+						AnimationCurve curve = new AnimationCurve ();
+						float endTime = GetTime (frameCount - 1, clip.frameRate);
+						curve.AddKey (KeyframeUtil.GetNew (0, 1, TangentMode.Stepped));
+						curve.AddKey (KeyframeUtil.GetNew (endTime, 1, TangentMode.Stepped));
+						clip.SetCurve (part.path, typeof(Transform), "localScale.x", curve);
 					}
 					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "SCLY");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);
-						clip.SetCurve (part.path, typeof(SSPart), "scl.y", curve);
+						clip.SetCurve (part.path, typeof(Transform), "localScale.y", curve);
+					}else{
+						AnimationCurve curve = new AnimationCurve ();
+						float endTime = GetTime (frameCount - 1, clip.frameRate);
+						curve.AddKey (KeyframeUtil.GetNew (0, 1, TangentMode.Stepped));
+						curve.AddKey (KeyframeUtil.GetNew (endTime, 1, TangentMode.Stepped));
+						clip.SetCurve (part.path, typeof(Transform), "localScale.y", curve);
 					}
-					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ALPH");
+					{
+						AnimationCurve curve = new AnimationCurve ();
+						float endTime = GetTime (frameCount - 1, clip.frameRate);
+						curve.AddKey (KeyframeUtil.GetNew (0, 1, TangentMode.Stepped));
+						curve.AddKey (KeyframeUtil.GetNew (endTime, 1, TangentMode.Stepped));
+						clip.SetCurve (part.path, typeof(Transform), "localScale.z", curve);
+					}					attribute = partAnime.attributes.SingleOrDefault (v => v.tag == "ALPH");
 					if (attribute != null) {
 						AnimationCurve curve = new AnimationCurve ();
 						SetFloatCurve (curve, attribute, clip.frameRate, frameCount);

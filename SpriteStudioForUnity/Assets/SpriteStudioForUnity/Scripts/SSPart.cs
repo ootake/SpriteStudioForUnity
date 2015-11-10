@@ -34,8 +34,6 @@ namespace SpriteStudioForUnity
 		Vector3 _pos;
 		public Vector3 rot;
 		Vector3 _rot;
-		public Vector3 scl;
-		Vector3 _scl;
 		public bool flpH;
 		bool _flpH;
 		public bool flpV;
@@ -151,18 +149,6 @@ namespace SpriteStudioForUnity
 				Vector3 localEulerAngles = transform.localEulerAngles;
 				localEulerAngles.z = rot.z;
 				transform.localEulerAngles = localEulerAngles;
-			}
-			if (scl.x != _scl.x) {
-				_scl.x = scl.x;
-				Vector3 localScale = transform.localScale;
-				localScale.x = scl.x;
-				transform.localScale = localScale;
-			}
-			if (scl.y != _scl.y) {
-				_scl.y = scl.y;
-				Vector3 localScale = transform.localScale;
-				localScale.y = scl.y;
-				transform.localScale = localScale;
 			}
 
 			if (partType == PartType.Null)
