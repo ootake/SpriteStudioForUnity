@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 //
 //	SpriteStudio5 Player for Unity
 //
@@ -49,7 +51,7 @@ InputPS	VS_main(InputVS Input)
 	Output.ParameterOverlay = Temp;
 
 	Temp = Input.vertex;
-	Temp = mul(UNITY_MATRIX_MVP, Temp);
+	Temp = UnityObjectToClipPos(Temp);
 	Output.PositionDraw = Temp;
 	Output.Position = Temp;
 

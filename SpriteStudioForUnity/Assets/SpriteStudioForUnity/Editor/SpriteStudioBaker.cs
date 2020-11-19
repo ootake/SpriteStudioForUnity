@@ -94,7 +94,7 @@ namespace SpriteStudioForUnity
 			AssetDatabase.ImportAsset (destFileName);
 			TextureImporter importer = TextureImporter.GetAtPath (destFileName) as TextureImporter;
 			if (importer != null) {
-				importer.textureType = TextureImporterType.Advanced;
+				importer.textureType = TextureImporterType.Default;
 				importer.maxTextureSize = 4096;
 				importer.textureFormat = TextureImporterFormat.AutomaticTruecolor;
 				importer.isReadable = false;
