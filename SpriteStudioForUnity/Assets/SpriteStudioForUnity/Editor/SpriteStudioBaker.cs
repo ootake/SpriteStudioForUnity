@@ -96,7 +96,7 @@ namespace SpriteStudioForUnity
 			if (importer != null) {
 				importer.textureType = TextureImporterType.Default;
 				importer.maxTextureSize = 4096;
-				// importer.textureFormat = TextureImporterFormat.AutomaticTruecolor;
+				importer.textureFormat = TextureImporterFormat.Automatic;
 				importer.isReadable = false;
 				importer.filterMode = FilterMode.Bilinear;
 				importer.npotScale = TextureImporterNPOTScale.None;

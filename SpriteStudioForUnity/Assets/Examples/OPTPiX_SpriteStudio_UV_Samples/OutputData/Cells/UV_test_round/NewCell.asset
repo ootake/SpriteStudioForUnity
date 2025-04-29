@@ -15,10 +15,10 @@ MonoBehaviour:
   mapName: 0
   mapId: 1
   cellId: 0
-  mixMaterial: {fileID: 2100000, guid: 511e922116dd64982bde471729ce5570, type: 2}
-  addMaterial: {fileID: 2100000, guid: 80d0caf28b23e4b43b8c3e68d6353091, type: 2}
-  mulMaterial: {fileID: 2100000, guid: c5aad8fe82b2d451c99810ad3e53fe54, type: 2}
-  subMaterial: {fileID: 2100000, guid: 5daeb47b48cc8491187b23f1a5c72f0d, type: 2}
+  mixMaterial: {fileID: 2100000, guid: 45f3c354c73854a57a1517bdc1ecdc12, type: 2}
+  addMaterial: {fileID: 2100000, guid: 9a7b73d6ac8e34be59be9e04621e258e, type: 2}
+  mulMaterial: {fileID: 2100000, guid: 084039d2a911a4b9698be16fad9fff7b, type: 2}
+  subMaterial: {fileID: 2100000, guid: 96639f9a0521c4342a2bf1c0330de5ff, type: 2}
   size: {x: 1024, y: 768}
   pos: {x: 0, y: 0}
   pivot: {x: 0, y: 0}
